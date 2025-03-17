@@ -32,7 +32,7 @@ const HeaderMain = () => {
 
   // Логика цветов
   const textColor = isScrolled
-    ? "text-[#3E3E3E]"
+    ? "text-white"
     : useWhiteText
     ? "text-white"
     : "text-white";
@@ -55,19 +55,18 @@ const HeaderMain = () => {
 
   return (
     <div
-      className={`${
-        isScrolled
-          ? "fixed top-0 bg-white z-50 shadow-md"
-          : "absolute top-0 left-0 z-50 bg-transparent"
-      } w-full transition-all duration-300`}
+    // className={"fixed top-0 z-50 shadow-md w-full transition-all duration-300"}
+    // className={`${
+    //   isScrolled
+    //     ? "fixed top-0 z-50 shadow-md"
+    //     : "absolute top-0 left-0 z-50 bg-transparent"
+    // } w-full transition-all duration-300`}
     >
       <div className="mx-auto container relative px-[30px]">
         <header
           className={`flex flex-row items-center w-full gap-5 justify-between`}
         >
-          {/* <Link href={"/main"} className="flex flex-row items-center gap-2"> */}
           <Logo />
-          {/* </Link> */}
           <div className="hidden md:flex flex-row items-center gap-10">
             <Link
               href={"/main"}
@@ -84,20 +83,6 @@ const HeaderMain = () => {
               {/* О компании */}
               {t("aboutCompany")}
             </Link>
-            {/* <ActivityMenu
-              textTitle={t("activity")}
-              isScrolled={isScrolled}
-              textColorFirstStage={textColor}
-              logoColor={logoColor}
-            /> */}
-
-            {/* <Link
-              href={"/media"}
-              className={`text-sm  ${getLinkClassName("/media")}`}
-            >
-              {t("mediaCenter")}
-              Медиа-центр
-            </Link> */}
             <Link
               href={"/contacts"}
               className={`text-sm  ${getLinkClassName("/contacts")}`}
