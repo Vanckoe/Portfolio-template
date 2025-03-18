@@ -158,6 +158,17 @@ legend {
 }
 
 .bg-noise {
-  background-image: url("/tool/noise.png");
-  background-size: cover;
+  position: relative;
+}
+
+.bg-noise::before {
+  content: "";
+  background-image: url("/tool/nooice.png");
+  background-repeat: repeat;
+  background-size: auto;
+  opacity: 0.03; /* прозрачность */
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
 }

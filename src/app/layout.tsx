@@ -33,11 +33,10 @@ export default async function RootLayout({
         <link rel="icon" href="/Favicon140.ico" sizes="any" />
         <link rel="icon" href="/Favicon140.png" type="image/png" />
         <link rel="icon" href="/Favicon140.svg" type="image/svg+xml" />
-
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body
-        className={`${manrope.className} flex flex-col bg-noise relative antialiased mt-2 bg-[#07141e] text-white`}
+        className={`${manrope.className} flex flex-col bg-noise bg-noise relative antialiased mt-2 bg-[#07141e] bg-repeat text-white`}
       >
         <QueryProvider>
           <NextIntlClientProvider messages={messages}>

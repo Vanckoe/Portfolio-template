@@ -5,9 +5,9 @@ import Stack from "./_components/stack";
 
 const About = () => {
   return (
-    <div className="flex flex-col mx-auto container relative px-[30px] mt-[20px]">
+    <div className="flex flex-col mx-auto container relative px-[30px] gap-[150px] mt-[20px]">
       <Hiro />
-      <Second />
+      {/* <Second /> */}
       <Stack />
       <Second />
     </div>

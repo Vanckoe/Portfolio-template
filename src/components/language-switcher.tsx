@@ -2,9 +2,9 @@
 
 import { Locale } from "@/i18n/config";
 import { setUserLocale } from "@/i18n/user-locale";
-import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import MobileMenu from "./mobileMenu";
+// import Image from "next/image";
 
 type LanguageSwitcherProps = {
   textColorFirstStage: string;
@@ -31,36 +31,40 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
   };
 
   return (
-    <div className="flex flex-row items-center gap-1">
-      {currentLocale === "ru" ? (
-        // Button to switch to Chinese
-        <button
-          className={`py-3 px-9 flex flex-row gap-2 my-3 items-center border transition-colors duration-150 ${textColorFirstStage}`}
-          onClick={() => handleLanguageChange("cn")}
-        >
-          <Image
-            src="/flags/kz.png"
-            alt="Флаг Казахстана"
-            width={16}
-            height={16}
-          />
-          Қазақша
-        </button>
-      ) : (
-        // Button to switch to Russian
-        <button
-          className={`py-3 px-9 flex flex-row gap-2 my-3 items-center border transition-colors duration-150 ${textColorFirstStage}`}
-          onClick={() => handleLanguageChange("ru")}
-        >
-          <Image
-            src="/flags/russia.png"
-            alt="Флаг России"
-            width={16}
-            height={16}
-          />
-          Русский
-        </button>
-      )}
+    <div className="flex flex-row items-center gap-3">
+      <button
+        className={`transition-colors flex flex-row items-center gap-2 duration-200 ${
+          currentLocale === "cn"
+            ? "text-white  font-bold"
+            : "text-gray-400 hover:text-white hover:font-extrabold"
+        }`}
+        onClick={() => handleLanguageChange("cn")}
+      >
+        {/* <Image
+          src="/flags/kz.png"
+          alt="Флаг Казахстана"
+          width={16}
+          height={16}
+        /> */}
+        EN
+      </button>
+      <span className="text-gray-400">----</span>
+      <button
+        className={`transition-colors flex flex-row items-center gap-2 duration-200 ${
+          currentLocale === "ru"
+            ? "text-white font-bold"
+            : "text-gray-400 hover:text-white hover:font-extrabold"
+        }`}
+        onClick={() => handleLanguageChange("ru")}
+      >
+        {/* <Image
+          src="/flags/russia.png"
+          alt="Флаг Казахстана"
+          width={16}
+          height={16}
+        /> */}
+        RU
+      </button>
       <MobileMenu textColorFirstStage={textColorFirstStage} />
     </div>
   );
