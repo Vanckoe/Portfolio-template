@@ -4,12 +4,12 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Logo from "@/assets/Logo";
 import LanguageSwitcher from "./language-switcher";
-import { useTranslations } from "next-intl";
+// import { useTranslations } from "next-intl";
 // import ActivityMenu from "./activityMenu";
 import { usePathname } from "next/navigation";
 
 const HeaderMain = () => {
-  const t = useTranslations("Navigation");
+  // const t = useTranslations("Navigation");
 
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
@@ -72,7 +72,7 @@ const HeaderMain = () => {
               href={"/main"}
               className={`text-sm  ${getLinkClassName("/main")}`}
             >
-              {t("technologies")}
+              main
             </Link>
             <Link
               href={
@@ -80,14 +80,13 @@ const HeaderMain = () => {
               }
               className={`text-sm  ${getLinkClassName("/about")}`}
             >
-              {/* О компании */}
-              {t("aboutCompany")}
+              wiki
             </Link>
             <Link
               href={"/contacts"}
               className={`text-sm  ${getLinkClassName("/contacts")}`}
             >
-              {t("contacts")}
+              contacts
               {/* Контакты */}
             </Link>
           </div>

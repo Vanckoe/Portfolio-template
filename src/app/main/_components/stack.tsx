@@ -18,14 +18,13 @@ const otherTools = [
 
 const Stack = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between gap-5 h-[70vh]">
-      <div className="flex flex-col w-1/2 border justify-center rounded-sm p-4">
+    <div className="flex flex-col md:flex-row justify-between  mx-auto container relative px-[30px] gap-5 h-[70vh]">
+      <div className="flex flex-col md:w-1/2 border justify-center rounded-sm p-4">
         <h1>Frontend Development</h1>
         <h2>Here need some subtitle</h2>
       </div>
 
-      <div className="flex flex-col md:flex-row w-1/2 border rounded-sm gap-4 p-4">
-        {/* Первая колонка с frontendTools */}
+      <div className="flex flex-row md:w-1/2 border rounded-sm gap-4 p-4">
         <div className="flex flex-col w-full items-center gap-4 overflow-auto">
           {frontendTools.map((src, index) => (
             <div key={index} className="relative w-[150px] h-[150px]">
@@ -39,7 +38,6 @@ const Stack = () => {
           ))}
         </div>
 
-        {/* Вторая колонка с otherTools */}
         <div className="flex flex-col w-full items-center gap-4 overflow-auto">
           {otherTools.map((src, index) => (
             <div key={index} className="relative w-[150px] h-[150px]">

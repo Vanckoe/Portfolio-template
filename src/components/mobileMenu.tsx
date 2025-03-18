@@ -7,21 +7,21 @@ import Logo from "@/assets/Logo";
 import Link from "next/link";
 // import RightTini from "@/assets/RightTini";
 // import Down from "@/assets/Down";
-import { useTranslations } from "next-intl";
+// import { useTranslations } from "next-intl";
 
 type MobileMenuProps = {
   textColorFirstStage: string;
 };
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ textColorFirstStage }) => {
-  const t = useTranslations("Services"); // Подключаем перевод
+  // const t = useTranslations("Services"); // Подключаем перевод
 
   const [isOpen, setIsOpen] = useState(false);
-  const [isActivitiesOpen, setIsActivitiesOpen] = useState(false);
+  // const [isActivitiesOpen, setIsActivitiesOpen] = useState(false);
 
   const handleClose = () => {
     setIsOpen(false);
-    setIsActivitiesOpen(false);
+    // setIsActivitiesOpen(false);
   };
 
   // const toggleActivities = () => setIsActivitiesOpen((prev) => !prev);
@@ -72,78 +72,21 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ textColorFirstStage }) => {
                     <RightTini width="20" height="20" />
                   )}
                 </button> */}
-                <AnimatePresence>
-                  {isActivitiesOpen && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      className="flex flex-col gap-4"
-                    >
-                      <Link
-                        href="/activity/analysis"
-                        className="text-xs font-semibold opacity-70 hover:text-[#1151AB]"
-                        onClick={handleClose}
-                      >
-                        {t("servicesList.explorationAndAnalysis")}
-                        {/* Поиск и анализ месторождений */}
-                      </Link>
-                      <Link
-                        href="/activity/geology"
-                        className="text-xs font-semibold opacity-70 hover:text-[#1151AB]"
-                        onClick={handleClose}
-                      >
-                        {t("servicesList.geologicalSurveys")}
-                        {/* Геологические работы */}
-                      </Link>
-                      <Link
-                        href="/activity/field"
-                        className="text-xs font-semibold opacity-70 hover:text-[#1151AB]"
-                        onClick={handleClose}
-                      >
-                        {t("servicesList.development")}
-                        {/* Разработка месторождений */}
-                      </Link>
-                      <Link
-                        href="/activity/construction"
-                        className="text-xs font-semibold opacity-70 hover:text-[#1151AB]"
-                        onClick={handleClose}
-                      >
-                        {t("servicesList.construction")}
-                        {/* Строительство фабрик и объектов */}
-                      </Link>
-                      <Link
-                        href="/activity/document"
-                        className="text-xs font-semibold opacity-70 hover:text-[#1151AB]"
-                        onClick={handleClose}
-                      >
-                        {t("servicesList.consulting")}
-                        {/* Консалтинг */}
-                      </Link>
-                      <Link
-                        href="/activity/mining"
-                        className="text-xs font-semibold opacity-70 hover:text-[#1151AB]"
-                        onClick={handleClose}
-                      >
-                        {t("servicesList.research")}
-                        {/* Научно-исследовательские работы */}
-                      </Link>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
                 <Link
                   href="/main"
                   className="hover:text-[#1151AB] text-sm"
                   onClick={handleClose}
                 >
-                  {t("sustainableDevelopment")}
+                  main
+                  {/* {t("sustainableDevelopment")} */}
                 </Link>
                 <Link
                   href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%B6%D0%B4%D1%83%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D1%8B%D0%B9_%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%B4%D0%B5%D0%BD%D1%8C"
                   className="hover:text-[#1151AB] text-sm"
                   onClick={handleClose}
                 >
-                  {t("aboutCompany")}
+                  {/* {t("aboutCompany")} */}
+                  wiki
                 </Link>
                 {/* Медиа-центр */}
 
@@ -152,8 +95,8 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ textColorFirstStage }) => {
                   className="hover:text-[#1151AB] text-sm"
                   onClick={handleClose}
                 >
-                  {t("contacts")}
-                  {/* Контакты */}
+                  {/* {t("contacts")} */}
+                  contacts
                 </Link>
               </nav>
             </motion.div>
