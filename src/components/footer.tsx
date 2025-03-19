@@ -1,10 +1,10 @@
 import React from "react";
 import Link from "next/link";
 import Logo from "@/assets/Logo";
-import { useTranslations } from "next-intl";
+// import { useTranslations } from "next-intl";
 import LanguageSwitcher from "./language-switcher";
 const Footer = () => {
-  const t = useTranslations("FooterBlock");
+  // const t = useTranslations("FooterBlock");
 
   return (
     <div className="w-full bg-[#080c11] mt-24 pt-5 pb-10">
@@ -30,18 +30,18 @@ const Footer = () => {
                 }
                 className="text-sm font-semibold"
               >
-                {t("aboutCompany")}
-                {/* О компании */}
+                {/* {t("aboutCompany")} */}
+                Link
               </Link>
 
               <Link href={"/main"} className="text-sm font-semibold">
-                {t("sustainableDevelopment")}
-                {/* Технологии{" "} */}
+                {/* {t("sustainableDevelopment")} */}
+                main
               </Link>
 
               <Link href={"/contacts"} className="text-sm font-semibold">
-                {t("contacts")}
-                {/* Контакты */}
+                {/* {t("contacts")} */}
+                contacts
               </Link>
             </div>
             <div className="hidden md:block">
