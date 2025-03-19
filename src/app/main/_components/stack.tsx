@@ -1,56 +1,43 @@
 import React from "react";
-import Image from "next/image";
-
-const frontendTools = [
-  "/tool/react.png",
-  "/tool/next.png",
-  "/tool/ts.png",
-  "/tool/vercel.png",
-  "/tool/js.png",
-];
-
-const otherTools = [
-  "/tool/tailwind.png",
-  "/tool/radixUI.png",
-  "/tool/MUI.png",
-  "/tool/nxt.png",
-];
+import SiteBlock from "./siteBlock";
 
 const Stack = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between  mx-auto container relative px-[30px] gap-5 h-[70vh]">
-      <div className="flex flex-col md:w-1/2 border justify-center rounded-sm p-4">
-        <h1>Frontend Development</h1>
-        <h2>Here need some subtitle</h2>
-      </div>
-
-      <div className="flex flex-row md:w-1/2 border rounded-sm gap-4 p-4">
-        <div className="flex flex-col w-full items-center gap-4 overflow-auto">
-          {frontendTools.map((src, index) => (
-            <div key={index} className="relative w-[150px] h-[150px]">
-              <Image
-                src={src}
-                alt={`Tool ${index}`}
-                fill
-                className="object-contain"
-              />
-            </div>
-          ))}
-        </div>
-
-        <div className="flex flex-col w-full items-center gap-4 overflow-auto">
-          {otherTools.map((src, index) => (
-            <div key={index} className="relative w-[150px] h-[150px]">
-              <Image
-                src={src}
-                alt={`Tool ${index}`}
-                fill
-                className="object-contain"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
+    <div className="flex flex-col justify-between  mx-auto container relative px-[30px] gap-20">
+      <SiteBlock
+        title="Artlumia"
+        description="Lending site for a video production agency. <br />
+          During the development of the project on Astro, a comprehensive
+          performance optimization was carried out. The delayed loading of
+          content in Astro (lazy loading) was used, only the elements visible to
+          the user are loaded, which increased the speed of the site."
+        link="https://artlumia-1.vercel.app"
+        stack="Astro, Calendly, TypeScript, Lozad"
+      />
+      <SiteBlock
+        title="KCMG"
+        description="Lending site for a video production agency.
+        
+          During the development of the project on Astro, a comprehensive
+          performance optimization was carried out. The delayed loading of
+          content in Astro (lazy loading) was used, only the elements visible to
+          the user are loaded, which increased the speed of the site."
+        link="https://kcmg.kz/"
+        className="bg-white"
+        stack="Nextjs, Tailwind, i18n, TypeScript"
+      />
+      <SiteBlock
+        title="Atmosfera.spa"
+        description="Lending site for a video production agency.
+      
+        During the development of the project on Astro, a comprehensive
+        performance optimization was carried out. The delayed loading of
+        content in Astro (lazy loading) was used, only the elements visible to
+        the user are loaded, which increased the speed of the site."
+        link="https://atmosfera.spa/"
+        className="bg-white"
+        stack="Nextjs, TypeScript,"
+      />
     </div>
   );
 };

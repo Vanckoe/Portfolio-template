@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
 import HeaderMain from "@/components/header";
-// import Footer from "@/components/footer";
+import Footer from "@/components/footer";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import QueryProvider from "@/components/QueryProvider";
@@ -42,7 +42,7 @@ export default async function RootLayout({
           <NextIntlClientProvider messages={messages}>
             <HeaderMain />
             {children}
-            {/* <Footer /> */}
+            <Footer />
           </NextIntlClientProvider>
         </QueryProvider>
       </body>

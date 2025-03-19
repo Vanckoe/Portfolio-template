@@ -24,7 +24,7 @@ const Hiro = () => {
         <div className="flex flex-col md:flex-row w-full md:justify-between md:items-center">
           <p className="text-start">Frontend Developer</p>
           <p className="md:text-end">
-            xx year e-commerce experience <br /> 10+ project complited
+            3 year e-commerce experience <br /> 10+ project complited
           </p>
         </div>
       </div>
