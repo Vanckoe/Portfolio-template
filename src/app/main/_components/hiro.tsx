@@ -1,16 +1,17 @@
 "use client";
 import React from "react";
 import { useCallback, useState } from "react";
-
 import Button from "@/components/button";
 import Link from "next/link";
-// import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { GithubIcon } from "@/assets/liveIcons/Git";
 import { InstagramIcon } from "@/assets/liveIcons/Insta";
 import { MailCheckIcon } from "@/assets/liveIcons/Mail";
 import { CheckCheckIcon } from "@/assets/liveIcons/Check";
 
 const Hiro = () => {
+  const t = useTranslations("Main");
+
   const [copied, setCopied] = useState(false);
 
   const handleCopy = useCallback(
@@ -45,11 +46,21 @@ const Hiro = () => {
           />
         </div>
 
-        <h1>Adil Talasbek</h1>
+        <h1>
+          {/* Adil Talasbek */}
+          {t("title")}
+        </h1>
         <div className="flex flex-col md:flex-row w-full md:justify-between md:items-center">
-          <p className="text-start">22 y.o</p>
+          <p className="text-start">
+            {/* 22 y.o */}
+            {t("years")}
+          </p>
           <p className="md:text-end">
-            3 year e-commerce experience <br /> 10+ project complited
+            {/* 3 year e-commerce experience */}
+            {t("ecom")}
+            <br />
+            {t("exp")}
+            {/* 10+ project complited */}
           </p>
         </div>
       </div>
@@ -57,8 +68,9 @@ const Hiro = () => {
         <div className="flex flex-col items-start h-full w-full md:pt-10 md:px-5 justify-between">
           <div className="h-full flex flex-col gap-2 text-xl">
             <p className="text-2xl mb-3">
-              Front-end Developer focused on creating great user interfaces;
-              developing web applications using React and Next.js
+              {t("subtitle")}
+              {/* Front-end Developer focused on creating great user interfaces;
+              developing web applications using React and Next.js */}
             </p>
             <GithubIcon
               size={20}
@@ -107,14 +119,18 @@ const Hiro = () => {
                 adiltalasbek@gmail.com
                 {copied && (
                   <span className="absolute top-full left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs rounded-[3px] px-2 py-1 mt-1">
-                    Скопировано!
+                    {/* Скопировано! */}
+                    {t("copy")}
                   </span>
                 )}
               </Link>
             </MailCheckIcon>
           </div>
           <Link href={"/about"} className="w-full">
-            <Button className="md:w-full mt-10">About me</Button>
+            <Button className="md:w-full mt-10">
+              {/* About me */}
+              {t("about")}
+            </Button>
           </Link>
         </div>
       </div>

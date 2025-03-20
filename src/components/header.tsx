@@ -4,12 +4,12 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Logo from "@/assets/Logo";
 import LanguageSwitcher from "./language-switcher";
-// import { useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 // import ActivityMenu from "./activityMenu";
 import { usePathname } from "next/navigation";
 
 const HeaderMain = () => {
-  // const t = useTranslations("Navigation");
+  const t = useTranslations("Navigation");
 
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
@@ -73,7 +73,8 @@ const HeaderMain = () => {
               href={"/main"}
               className={`text-sm  ${getLinkClassName("/main")}`}
             >
-              Main
+              {/* Main */}
+              {t("main")}
             </Link>
             {/* <Link
               href={
@@ -87,8 +88,8 @@ const HeaderMain = () => {
               href={"/about"}
               className={`text-sm  ${getLinkClassName("/about")}`}
             >
-              About me
-              {/* Контакты */}
+              {/* About me */}
+              {t("about")}
             </Link>
           </div>
           <LanguageSwitcher textColorFirstStage={textColor} />

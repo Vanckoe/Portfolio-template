@@ -2,6 +2,7 @@ import React from "react";
 import { LinkIcon } from "@/assets/liveIcons/Link";
 import Link from "next/link";
 import { cn } from "@/utils/cn";
+import { useTranslations } from "next-intl";
 
 type SiteProps = {
   title?: string;
@@ -18,6 +19,8 @@ const SiteBlock: React.FC<SiteProps> = ({
   className,
   stack,
 }) => {
+  const t = useTranslations("Projects");
+
   return (
     <div className="flex md:flex-row flex-col gap-10 items-start">
       {link ? (
@@ -27,7 +30,7 @@ const SiteBlock: React.FC<SiteProps> = ({
         ></iframe>
       ) : (
         <div className="w-full h-[50vh] flex items-center justify-center border border-gray-300">
-          <p className="text-gray-500">Предпросмотр недоступен</p>
+          <p className="text-gray-500">{t("previewError")}</p>
         </div>
       )}
 
@@ -48,7 +51,7 @@ const SiteBlock: React.FC<SiteProps> = ({
         <p className="mt-2">{description}</p>
         {stack ? (
           <p className="mt-4">
-            Stack: <span className="font-bold"> {stack}</span>
+            {t("stack")}: <span className="font-bold"> {stack}</span>
           </p>
         ) : null}
       </div>

@@ -1,16 +1,39 @@
 {
   "Navigation": {
-    "aboutCompany": "Тарих",
-    "activity": "活动",
+    "about": "About me",
+    "main": "Main",
     "technologies": "Бастысы",
     "mediaCenter": "媒体中心",
     "contacts": "Лүпілге "
   },
   "Main": {
-    "title": "Kazakhstan-China Mining Group Ltd",
-    "subtitle": "Сіздерді 8 наурыз-Халықаралық әйелдер күнімен шын жүректен құттықтаймын! 💐 Бұл күн сізге қуаныш, күлімсіреу және жылулық әкелсін!",
-    "learnMore": "Осы күннің тарихы",
-    "soundOn": "СӨндІР ЩеЩЕС!!!",
-    "soundOff": "Жәрайд қосабер"
+    "title": "Adil Talasbek",
+    "subtitle": "Frontend Developer focused on creating great user interfaces; developing web applications using React and Next.js",
+    "ecom": "3 year e-commerce experience",
+    "years": "22 y.o",
+    "exp": "10+ project complited",
+    "copy": "Copied!",
+    "about": "About me"
+  },
+  "Projects": {
+    "generaltitle": "What I’ve Built",
+    "stack": "Stack",
+    "previewError": "Preview not available",
+    "project1": {
+      "title": "Artlumia",
+      "description": "Lending site for a video production agency.  During the development of the project on Astro, a comprehensive performance optimization was carried out. The delayed loading of content in Astro (lazy loading) was used, which increased the site speed by 27 times."
+    },
+    "project2": {
+      "title": "KCMG",
+      "description": "Multi-page, multilingual landing website for Kazakhstan-China Mining Group Ltd (KCMG), a company specializing in mining and resource extraction. The project included rapid layout implementation within 2 days, seamless frontend-backend integration, and optimization for performance and multilingual support. The website ensures a modern user experience with a responsive design, structured content, and an intuitive interface to showcase the company's operations, services, and corporate values."
+    },
+    "project3": {
+      "title": "Atmosfera.spa",
+      "description": "The Atmosfera SPA website is clear and user-friendly, with intuitive navigation. It features information about services, reviews, and the spa center. Fast loading times and a well-structured layout ensure a smooth user experience."
+    },
+    "project4": {
+      "title": "Gasyr140",
+      "description": "Gasyr140 is an online school for preparing students for the Unified National Test. It includes subscription management for paid users, an admission probability assessment for various universities, a leaderboard, an AI-powered virtual tutor for additional support, and a mock UNT exam. The website is designed to display video lessons, tests, and notes uploaded by teachers."
+    }
   }
 }

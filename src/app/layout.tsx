@@ -36,7 +36,7 @@ export default async function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body
-        className={`${manrope.className} flex flex-col bg-noise bg-noise relative antialiased mt-2 bg-gradient-to-t from-[#070c1e] to-[#070c1e] bg-repeat text-white`}
+        className={`${manrope.className} flex flex-col bg-noise bg-noise relative antialiased mt-2 bg-[#070c1e] bg-repeat text-white`}
       >
         <QueryProvider>
           <NextIntlClientProvider messages={messages}>
