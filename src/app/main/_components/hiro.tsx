@@ -28,7 +28,7 @@ const Hiro = () => {
   );
 
   return (
-    <div className="flex w-full flex-col md:flex-row h-[80vh]  mx-auto container relative px-[30px] items-stretch gap-5">
+    <div className="flex w-full flex-col md:flex-row  mx-auto container relative px-[30px] items-stretch gap-5">
       <div className="w-full flex flex-col items-start">
         <div className="w-full aspect-video">
           <iframe
@@ -54,64 +54,66 @@ const Hiro = () => {
         </div>
       </div>
       <div className="flex flex-col gap-5 md:w-[50%] ">
-        <div className="h-full flex flex-col gap-2 text-xl border-white md:py-10 md:px-5">
-          <p className="text-2xl mb-3">
-            Front-end Developer focused on creating great user interfaces;
-            developing web applications using React and Next.js
-          </p>
-          <GithubIcon
-            size={20}
-            className="flex flex-row opacity-80 hover:opacity-100 items-center gap-3"
-          >
-            <Link
-              href={"https://github.com/Vanckoe"}
-              className="hover:underline text-xl"
+        <div className="flex flex-col items-start h-full w-full md:pt-10 md:px-5 justify-between">
+          <div className="h-full flex flex-col gap-2 text-xl">
+            <p className="text-2xl mb-3">
+              Front-end Developer focused on creating great user interfaces;
+              developing web applications using React and Next.js
+            </p>
+            <GithubIcon
+              size={20}
+              className="flex flex-row opacity-80 hover:opacity-100 items-center gap-3"
             >
-              Vanckoe
-            </Link>
-          </GithubIcon>
-          <InstagramIcon
-            size={20}
-            className="flexflex-row opacity-80 hover:opacity-100 items-center gap-3"
-          >
-            <Link
-              href={"https://www.instagram.com/born_in_the_steppe/?hl=ru"}
-              className="hover:underline text-xl"
+              <Link
+                href={"https://github.com/Vanckoe"}
+                className="hover:underline text-xl"
+              >
+                Vanckoe
+              </Link>
+            </GithubIcon>
+            <InstagramIcon
+              size={20}
+              className="flexflex-row opacity-80 hover:opacity-100 items-center gap-3"
             >
-              @born_in_the_steppe
-            </Link>
-          </InstagramIcon>
+              <Link
+                href={"https://www.instagram.com/born_in_the_steppe/?hl=ru"}
+                className="hover:underline text-xl"
+              >
+                @born_in_the_steppe
+              </Link>
+            </InstagramIcon>
 
-          <CheckCheckIcon
-            size={20}
-            className="flexflex-row opacity-80 hover:opacity-100 items-center gap-3"
-          >
-            <Link
-              href={"https://t.me/Vanckoe21"}
-              className="hover:underline text-xl"
+            <CheckCheckIcon
+              size={20}
+              className="flexflex-row opacity-80 hover:opacity-100 items-center gap-3"
             >
-              @Vanckoe21
-            </Link>
-          </CheckCheckIcon>
+              <Link
+                href={"https://t.me/Vanckoe21"}
+                className="hover:underline text-xl"
+              >
+                @Vanckoe21
+              </Link>
+            </CheckCheckIcon>
 
-          <MailCheckIcon
-            size={20}
-            className="flexflex-row opacity-80 hover:opacity-100 items-center gap-3"
-          >
-            <Link
-              href={""}
-              className="hover:underline text-xl relative"
-              onClick={handleCopy}
+            <MailCheckIcon
+              size={20}
+              className="flexflex-row opacity-80 hover:opacity-100 items-center gap-3"
             >
-              adiltalasbek@gmail.com
-              {copied && (
-                <span className="absolute top-full left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs rounded-[3px] px-2 py-1 mt-1">
-                  Скопировано!
-                </span>
-              )}
-            </Link>
-          </MailCheckIcon>
-          <Link href={"/about"}>
+              <Link
+                href={""}
+                className="hover:underline text-xl relative"
+                onClick={handleCopy}
+              >
+                adiltalasbek@gmail.com
+                {copied && (
+                  <span className="absolute top-full left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs rounded-[3px] px-2 py-1 mt-1">
+                    Скопировано!
+                  </span>
+                )}
+              </Link>
+            </MailCheckIcon>
+          </div>
+          <Link href={"/about"} className="w-full">
             <Button className="md:w-full mt-10">About me</Button>
           </Link>
         </div>

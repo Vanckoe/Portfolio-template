@@ -12,6 +12,7 @@ const frontendTools = [
   "/tool/ts.png",
   "/tool/react.png",
   "/tool/next.png",
+  "/tool/vercel.png",
   "/tool/github.png",
   "/tool/MUI.png",
   "/tool/radixUI.png",
@@ -23,6 +24,7 @@ const frontendTools = [
   "/tool/ts.png",
   "/tool/react.png",
   "/tool/next.png",
+  "/tool/vercel.png",
   "/tool/github.png",
 ];
 
