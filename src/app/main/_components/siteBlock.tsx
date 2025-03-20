@@ -37,7 +37,7 @@ const SiteBlock: React.FC<SiteProps> = ({
         {link && (
           <LinkIcon
             size={20}
-            className="flex mt-5 flex-row underline hover:text-cyan-200 items-center gap-3"
+            className="flex mt-5 flex-row hover:text-cyan-200 items-center gap-3"
           >
             <Link href={link} target="_blank" rel="noopener noreferrer">
               {link}

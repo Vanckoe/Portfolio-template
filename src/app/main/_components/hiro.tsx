@@ -1,9 +1,32 @@
+"use client";
 import React from "react";
+import { useCallback, useState } from "react";
+
 import Button from "@/components/button";
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
+import { GithubIcon } from "@/assets/liveIcons/Git";
+import { InstagramIcon } from "@/assets/liveIcons/Insta";
+import { MailCheckIcon } from "@/assets/liveIcons/Mail";
+import { CheckCheckIcon } from "@/assets/liveIcons/Check";
 
 const Hiro = () => {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = useCallback(
+    async (e: React.MouseEvent<HTMLAnchorElement>) => {
+      e.preventDefault();
+      try {
+        await navigator.clipboard.writeText("adiltalasbek@gmail.com");
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000); // Убираем статус через 2 сек
+      } catch (err) {
+        console.error("Ошибка при копировании:", err);
+      }
+    },
+    []
+  );
+
   return (
     <div className="flex w-full flex-col md:flex-row h-[80vh]  mx-auto container relative px-[30px] items-stretch gap-5">
       <div className="w-full flex flex-col items-start">
@@ -11,6 +34,7 @@ const Hiro = () => {
           <iframe
             title="Robot Whale"
             className="w-full h-full border-0"
+            style={{ overflow: "hidden" }}
             allowFullScreen
             allow="autoplay; fullscreen; xr-spatial-tracking"
             xr-spatial-tracking="true"
@@ -18,71 +42,78 @@ const Hiro = () => {
             execution-while-not-rendered="true"
             web-share="true"
             src="https://sketchfab.com/models/4d11fdf6d57a4fda924e9e5623602022/embed?autostart=1&transparent=1&ui_theme=dark"
-          ></iframe>
+          />
         </div>
+
         <h1>Adil Talasbek</h1>
         <div className="flex flex-col md:flex-row w-full md:justify-between md:items-center">
-          <p className="text-start">Frontend Developer</p>
+          <p className="text-start">22 y.o</p>
           <p className="md:text-end">
             3 year e-commerce experience <br /> 10+ project complited
           </p>
         </div>
       </div>
-      <div className="flex flex-col gap-5 md:w-1/3 ">
-        <div className="h-full flex flex-col gap-2 text-xl border-white py-10 px-5">
-          <div className="flex flex-row items-center gap-2">
-            <Image
-              src="https://cdn-icons-png.flaticon.com/512/733/733609.png"
-              alt="Github"
-              width={16}
-              height={16}
-              className="invert"
-            />
+      <div className="flex flex-col gap-5 md:w-[50%] ">
+        <div className="h-full flex flex-col gap-2 text-xl border-white md:py-10 md:px-5">
+          <p className="text-2xl mb-3">
+            Front-end Developer focused on creating great user interfaces;
+            developing web applications using React and Next.js
+          </p>
+          <GithubIcon
+            size={20}
+            className="flex flex-row opacity-80 hover:opacity-100 items-center gap-3"
+          >
             <Link
               href={"https://github.com/Vanckoe"}
-              className="underline font-medium"
+              className="hover:underline text-xl"
             >
               Vanckoe
             </Link>
-          </div>
-          <div className="flex flex-row items-center gap-2">
-            <Image
-              src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
-              alt="Instagram"
-              width={16}
-              height={16}
-            />{" "}
+          </GithubIcon>
+          <InstagramIcon
+            size={20}
+            className="flexflex-row opacity-80 hover:opacity-100 items-center gap-3"
+          >
             <Link
               href={"https://www.instagram.com/born_in_the_steppe/?hl=ru"}
-              className=" underline font-medium"
+              className="hover:underline text-xl"
             >
-              Born_in_the_steppe
+              @born_in_the_steppe
             </Link>
-          </div>
-          <div className="flex flex-row items-center gap-2">
-            <Image
-              src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png"
-              alt="Telegram"
-              width={16}
-              height={16}
-            />{" "}
+          </InstagramIcon>
+
+          <CheckCheckIcon
+            size={20}
+            className="flexflex-row opacity-80 hover:opacity-100 items-center gap-3"
+          >
             <Link
               href={"https://t.me/Vanckoe21"}
-              className=" underline font-medium"
+              className="hover:underline text-xl"
             >
               @Vanckoe21
             </Link>
-          </div>
-          <div className="flex flex-row items-center gap-2">
-            <Image
-              src="https://cdn-icons-png.flaticon.com/512/5968/5968534.png"
-              alt="Gmail"
-              width={16}
-              height={16}
-            />{" "}
-            <p className="font-medium">adiltalasbek@gmail.com</p>
-          </div>
-          <Button className="md:w-full mt-10">Кнопка</Button>
+          </CheckCheckIcon>
+
+          <MailCheckIcon
+            size={20}
+            className="flexflex-row opacity-80 hover:opacity-100 items-center gap-3"
+          >
+            <Link
+              href={""}
+              className="hover:underline text-xl relative"
+              onClick={handleCopy}
+            >
+              adiltalasbek@gmail.com
+              {copied && (
+                <span className="absolute top-full left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs rounded-[3px] px-2 py-1 mt-1">
+                  Скопировано!
+                </span>
+              )}
+            </Link>
+          </MailCheckIcon>
+          <Link href={"/about"}>
+            <Button className="md:w-full mt-10">About me</Button>
+          </Link>
         </div>
       </div>
     </div>

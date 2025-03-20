@@ -36,12 +36,12 @@ const Footer = () => {
 
               <Link href={"/main"} className="text-sm font-semibold">
                 {/* {t("sustainableDevelopment")} */}
-                main
+                Main
               </Link>
 
-              <Link href={"/contacts"} className="text-sm font-semibold">
+              <Link href={"/about"} className="text-sm font-semibold">
                 {/* {t("contacts")} */}
-                contacts
+                About
               </Link>
             </div>
             <div className="hidden md:block">
