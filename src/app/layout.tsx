@@ -37,6 +37,7 @@ export default async function RootLayout({
       </head>
       <body
         className={`${manrope.className} flex flex-col bg-noise bg-noise relative antialiased mt-2 bg-[#070c1e] bg-repeat text-white`}
+        style={{ backgroundImage: "url('/bg/bg-fin.png')" }}
       >
         <QueryProvider>
           <NextIntlClientProvider messages={messages}>
