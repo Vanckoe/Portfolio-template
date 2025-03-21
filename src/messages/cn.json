@@ -1,10 +1,7 @@
 {
   "Navigation": {
     "about": "About me",
-    "main": "Main",
-    "technologies": "Бастысы",
-    "mediaCenter": "媒体中心",
-    "contacts": "Лүпілге "
+    "main": "Main"
   },
   "Main": {
     "title": "Adil Talasbek",

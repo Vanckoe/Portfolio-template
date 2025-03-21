@@ -65,7 +65,7 @@ const Hiro = () => {
         </div>
       </div>
       <div className="flex flex-col gap-5 md:w-[50%] ">
-        <div className="flex flex-col items-start h-full w-full md:pt-10 md:px-5 justify-between">
+        <div className="flex flex-col items-start h-full w-full  md:px-5 justify-between">
           <div className="h-full flex flex-col gap-2 text-xl">
             <p className="text-2xl mb-3">
               {t("subtitle")}
