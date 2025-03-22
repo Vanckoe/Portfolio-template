@@ -35,8 +35,7 @@ const GlowLink: React.FC<GlowLinkProps> = ({ href, children, className }) => {
         relative inline-block overflow-hidden w-fit
         rounded-[5px]
         px-10 py-3 border border-neutral-800
-        text-[#ededed] text-sm font-mono
-        tracking-tighter 
+        text-[#ededed] text-base tracking-normal
         transition duration-300 
          hover:border-neutral-400 
         select-none
@@ -45,13 +44,13 @@ const GlowLink: React.FC<GlowLinkProps> = ({ href, children, className }) => {
     >
       {/* Glow that follows cursor */}
       <motion.div
-        className="pointer-events-none absolute z-0 h-28 w-28 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#294868] opacity-25 blur-xl"
+        className="pointer-events-none absolute z-0 h-28 w-28 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#363e46] opacity-25 blur-xl"
         animate={{ left: pos.x, top: pos.y }}
       />
 
       {/* Border halo glow */}
       <motion.div
-        className="pointer-events-none absolute z-0 h-48 w-48 -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan-400 opacity-10 blur-[8px]"
+        className="pointer-events-none absolute z-0 h-48 w-48 -translate-x-1/2 -translate-y-1/2 rounded-full border border-gray-400 opacity-10 blur-[8px]"
         animate={{ left: pos.x, top: pos.y }}
       />
 

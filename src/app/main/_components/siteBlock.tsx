@@ -1,6 +1,6 @@
 import React from "react";
-// import { LinkIcon } from "@/assets/liveIcons/Link";
-// import Link from "next/link";
+import { LinkIcon } from "@/assets/liveIcons/Link";
+import Link from "next/link";
 import { cn } from "@/utils/cn";
 import { useTranslations } from "next-intl";
 import GlowLink from "./gradient";
@@ -40,18 +40,18 @@ const SiteBlock: React.FC<SiteProps> = ({
         <div className="flex flex-col">
           <h2 className="text-5xl font-semibold">{title}</h2>
 
-          {/* {link && (
+          {link && (
             <LinkIcon
               size={20}
-              className="flex mt-7 flex-row w-fit bg-white p-2 rounded-[5px] text-black opacity-80 hover:opacity-100 items-center gap-3"
+              className="flex mt-5 flex-row w-fit text-white opacity-80 hover:opacity-100 items-center gap-3"
             >
               <Link href={link} target="_blank" rel="noopener noreferrer">
                 {link}
               </Link>
             </LinkIcon>
-          )} */}
+          )}
 
-          {description && <p className="mt-4">{description}</p>}
+          {description && <p className="mt-2">{description}</p>}
 
           {stack && (
             <p className="mt-2">
