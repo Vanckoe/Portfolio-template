@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useCallback, useState } from "react";
-import Button from "@/components/button";
+// import Button from "@/components/button";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { GithubIcon } from "@/assets/liveIcons/Git";
@@ -126,12 +126,11 @@ const Hiro = () => {
               </Link>
             </MailCheckIcon>
           </div>
-          <Link href={"/about"} className="w-full">
+          {/* <Link href={"/about"} className="w-full">
             <Button className="md:w-full mt-10">
-              {/* About me */}
               {t("about")}
             </Button>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>
