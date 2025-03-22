@@ -3,6 +3,7 @@ import { LinkIcon } from "@/assets/liveIcons/Link";
 import Link from "next/link";
 import { cn } from "@/utils/cn";
 import { useTranslations } from "next-intl";
+// import Button from "@/components/button";
 
 type SiteProps = {
   title?: string;
@@ -34,26 +35,31 @@ const SiteBlock: React.FC<SiteProps> = ({
         </div>
       )}
 
-      <div className="flex md:w-[60%] flex-col">
-        <h2 className="text-5xl font-semibold">{title}</h2>
+      <div className="flex md:w-[60%] flex-col justify-between h-full">
+        <div className="flex flex-col">
+          <h2 className="text-5xl font-semibold">{title}</h2>
 
-        {link && (
-          <LinkIcon
-            size={20}
-            className="flex mt-5 flex-row w-fit bg-white p-2 rounded-[5px] text-black opacity-80 hover:opacity-100 items-center gap-3"
-          >
-            <Link href={link} target="_blank" rel="noopener noreferrer">
-              {link}
-            </Link>
-          </LinkIcon>
-        )}
+          {link && (
+            <LinkIcon
+              size={20}
+              className="flex mt-7 flex-row w-fit bg-white p-2 rounded-[5px] text-black opacity-80 hover:opacity-100 items-center gap-3"
+            >
+              <Link href={link} target="_blank" rel="noopener noreferrer">
+                {link}
+              </Link>
+            </LinkIcon>
+          )}
 
-        <p className="mt-2">{description}</p>
-        {stack ? (
-          <p className="mt-4">
-            {t("stack")}: <span className="font-bold"> {stack}</span>
-          </p>
-        ) : null}
+          {description && <p className="mt-4">{description}</p>}
+
+          {stack && (
+            <p className="mt-4">
+              {t("stack")}: <span className="font-bold"> {stack}</span>
+            </p>
+          )}
+        </div>
+
+        {/* <Button className="">Перейти на сайт</Button> */}
       </div>
     </div>
   );

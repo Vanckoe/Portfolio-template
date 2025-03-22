@@ -22,7 +22,7 @@
     },
     "project2": {
       "title": "KCMG",
-      "description": "Multi-page, multilingual landing website for Kazakhstan-China Mining Group Ltd (KCMG), a company specializing in mining and resource extraction. The project included rapid layout implementation within 2 days, seamless frontend-backend integration, and optimization for performance and multilingual support. The website ensures a modern user experience with a responsive design, structured content, and an intuitive interface to showcase the company's operations, services, and corporate values."
+      "description": "Multi-page corporate website for a mining company. Features responsive layout, multilingual support, sliders, interactive diagrams, and CMS integration. The site is stable, fast-loading, and easily scalable."
     },
     "project3": {
       "title": "Atmosfera.spa",
@@ -30,7 +30,15 @@
     },
     "project4": {
       "title": "Gasyr140",
+      "description": "Online platform for Unified National Testing prep with registration, user dashboard, subscriptions, mock exams, and recommendation system. Features responsive layout, dynamic navigation, and backend integration."
+    },
+    "project5": {
+      "title": "Gasyr140",
       "description": "Gasyr140 is an online school for preparing students for the Unified National Test. It includes subscription management for paid users, an admission probability assessment for various universities, a leaderboard, an AI-powered virtual tutor for additional support, and a mock UNT exam. The website is designed to display video lessons, tests, and notes uploaded by teachers."
+    },
+    "project6": {
+      "title": "Театр Горького",
+      "description": "Multi-page theater website with playbill, ticket sales, and details about performances and cast. Implemented responsive layout, event filtering, and integration with an external booking system."
     }
   }
 }

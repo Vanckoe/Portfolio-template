@@ -7,7 +7,7 @@ const Footer = () => {
   const t = useTranslations("Navigation");
 
   return (
-    <div className="w-full bg-[#080c11] pt-5 pb-10">
+    <div className="w-full bg-[#080c11] bg-opacity-80 pt-5 pb-10">
       <footer className="container px-5 justify-between  text-white mx-auto w-full flex flex-col md:flex-row items-center">
         <div className="flex flex-row items-center md:items-start justify-between md:justify-start w-full md:w-fit md:flex-col gap-2.5 ">
           <Logo />
