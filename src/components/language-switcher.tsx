@@ -3,16 +3,18 @@
 import { Locale } from "@/i18n/config";
 import { setUserLocale } from "@/i18n/user-locale";
 import React, { useState, useEffect } from "react";
-import MobileMenu from "./mobileMenu";
+// import MobileMenu from "./mobileMenu";
 // import Image from "next/image";
 
 type LanguageSwitcherProps = {
   textColorFirstStage: string;
 };
 
-const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
-  textColorFirstStage,
-}) => {
+const LanguageSwitcher: React.FC<LanguageSwitcherProps> = (
+  {
+    // textColorFirstStage,
+  }
+) => {
   const [currentLocale, setCurrentLocale] = useState<Locale>("ru");
 
   // Load language from localStorage on component mount
@@ -65,7 +67,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
         /> */}
         RU
       </button>
-      <MobileMenu textColorFirstStage={textColorFirstStage} />
+      {/* <MobileMenu textColorFirstStage={textColorFirstStage} /> */}
     </div>
   );
 };

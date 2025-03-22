@@ -1,15 +1,15 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
+// import Link from "next/link";
 import Logo from "@/assets/Logo";
 import LanguageSwitcher from "./language-switcher";
-import { useTranslations } from "next-intl";
+// import { useTranslations } from "next-intl";
 // import ActivityMenu from "./activityMenu";
 import { usePathname } from "next/navigation";
 
 const HeaderMain = () => {
-  const t = useTranslations("Navigation");
+  // const t = useTranslations("Navigation");
 
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
@@ -36,10 +36,10 @@ const HeaderMain = () => {
     : useWhiteText
     ? "text-white"
     : "text-white";
-  const getLinkClassName = (route: string) => {
-    const isActive = pathname === route;
-    return `${textColor} ${isActive ? "font-extrabold" : "font-semibold"}`;
-  };
+  // const getLinkClassName = (route: string) => {
+  //   const isActive = pathname === route;
+  //   return `${textColor} ${isActive ? "font-extrabold" : "font-semibold"}`;
+  // };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,30 +68,21 @@ const HeaderMain = () => {
         >
           <Logo />
 
-          <div className="hidden md:flex flex-row items-center gap-10">
+          {/* <div className="hidden md:flex flex-row items-center gap-10">
             <Link
               href={"/main"}
               className={`text-sm  ${getLinkClassName("/main")}`}
             >
-              {/* Main */}
               {t("main")}
             </Link>
-            {/* <Link
-              href={
-                "https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%B6%D0%B4%D1%83%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D1%8B%D0%B9_%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%B4%D0%B5%D0%BD%D1%8C"
-              }
-              className={`text-sm  ${getLinkClassName("/wiki")}`}
-            >
-              wiki
-            </Link> */}
+
             <Link
               href={"/about"}
               className={`text-sm  ${getLinkClassName("/about")}`}
             >
-              {/* About me */}
               {t("about")}
             </Link>
-          </div>
+          </div> */}
           <LanguageSwitcher textColorFirstStage={textColor} />
         </header>
       </div>
