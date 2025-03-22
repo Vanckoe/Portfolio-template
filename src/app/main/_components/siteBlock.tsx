@@ -36,14 +36,14 @@ const SiteBlock: React.FC<SiteProps> = ({
           </div>
         </div>
       ) : (
-        <>
+        <div className="flex flex-col w-full">
           <div className="w-full h-[50vh] flex items-center justify-center border border-gray-300">
             <p className="text-gray-500">{t("previewError")}</p>
           </div>
           <div className="mt-7 md:hidden">
             <GlowLink href={link || "#"}>Перейти на сайт</GlowLink>
           </div>
-        </>
+        </div>
       )}
 
       <div className="flex md:w-[60%] flex-col justify-between h-full">

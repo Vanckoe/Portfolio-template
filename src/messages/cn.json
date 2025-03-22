@@ -37,7 +37,7 @@
       "description": "Gasyr140 is an online school for preparing students for the Unified National Test. It includes subscription management for paid users, an admission probability assessment for various universities, a leaderboard, an AI-powered virtual tutor for additional support, and a mock UNT exam. The website is designed to display video lessons, tests, and notes uploaded by teachers."
     },
     "project6": {
-      "title": "Театр Горького",
+      "title": "Gorky Theater",
       "description": "Multi-page theater website with playbill, ticket sales, and details about performances and cast. Implemented responsive layout, event filtering, and integration with an external booking system."
     }
   }
