@@ -24,16 +24,26 @@ const SiteBlock: React.FC<SiteProps> = ({
   const t = useTranslations("Projects");
 
   return (
-    <div className="flex md:flex-row flex-col gap-10 items-start">
+    <div className="flex md:flex-row  flex-col-reverse gap-10 items-start">
       {link ? (
-        <iframe
-          src={link}
-          className={cn(className, "w-full h-[50vh] border-none")}
-        ></iframe>
-      ) : (
-        <div className="w-full h-[50vh] flex items-center justify-center border border-gray-300">
-          <p className="text-gray-500">{t("previewError")}</p>
+        <div className="flex flex-col w-full">
+          <iframe
+            src={link}
+            className={cn(className, "w-full h-[50vh] border-none")}
+          ></iframe>
+          <div className="mt-7 md:hidden">
+            <GlowLink href={link || "#"}>Перейти на сайт</GlowLink>
+          </div>
         </div>
+      ) : (
+        <>
+          <div className="w-full h-[50vh] flex items-center justify-center border border-gray-300">
+            <p className="text-gray-500">{t("previewError")}</p>
+          </div>
+          <div className="mt-7 md:hidden">
+            <GlowLink href={link || "#"}>Перейти на сайт</GlowLink>
+          </div>
+        </>
       )}
 
       <div className="flex md:w-[60%] flex-col justify-between h-full">
@@ -59,7 +69,7 @@ const SiteBlock: React.FC<SiteProps> = ({
             </p>
           )}
         </div>
-        <div className="mt-5">
+        <div className="mt-5 hidden md:block">
           <GlowLink href={link || "#"}>Перейти на сайт</GlowLink>
         </div>
         {/* <Button className="">Перейти на сайт</Button> */}

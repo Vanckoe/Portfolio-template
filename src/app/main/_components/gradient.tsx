@@ -32,9 +32,9 @@ const GlowLink: React.FC<GlowLinkProps> = ({ href, children, className }) => {
       target="_blank"
       rel="noopener noreferrer"
       className={`
-        relative inline-block overflow-hidden w-fit
-        rounded-[5px]
-        px-10 py-3 border border-neutral-800
+        relative inline-block overflow-hidden w-full md:w-fit
+        rounded-[5px] text-center
+        md:px-12 py-4 border border-neutral-800
         text-[#ededed] text-base tracking-normal
         transition duration-300 
          hover:border-neutral-400 
