@@ -1,8 +1,9 @@
 import React from "react";
-import { LinkIcon } from "@/assets/liveIcons/Link";
-import Link from "next/link";
+// import { LinkIcon } from "@/assets/liveIcons/Link";
+// import Link from "next/link";
 import { cn } from "@/utils/cn";
 import { useTranslations } from "next-intl";
+import GlowLink from "./gradient";
 // import Button from "@/components/button";
 
 type SiteProps = {
@@ -39,7 +40,7 @@ const SiteBlock: React.FC<SiteProps> = ({
         <div className="flex flex-col">
           <h2 className="text-5xl font-semibold">{title}</h2>
 
-          {link && (
+          {/* {link && (
             <LinkIcon
               size={20}
               className="flex mt-7 flex-row w-fit bg-white p-2 rounded-[5px] text-black opacity-80 hover:opacity-100 items-center gap-3"
@@ -48,17 +49,19 @@ const SiteBlock: React.FC<SiteProps> = ({
                 {link}
               </Link>
             </LinkIcon>
-          )}
+          )} */}
 
           {description && <p className="mt-4">{description}</p>}
 
           {stack && (
-            <p className="mt-4">
+            <p className="mt-2">
               {t("stack")}: <span className="font-bold"> {stack}</span>
             </p>
           )}
         </div>
-
+        <div className="mt-5">
+          <GlowLink href={link || "#"}>Перейти на сайт</GlowLink>
+        </div>
         {/* <Button className="">Перейти на сайт</Button> */}
       </div>
     </div>
