@@ -4,6 +4,20 @@ import Image from "next/image";
 const frontendTools = [
   "/tool/MUI.png",
   "/tool/radixUI.png",
+  "/tool/motiondev.png",
+  "/tool/tailwind.png",
+  "/tool/astro.png",
+  "/tool/html.png",
+  "/tool/css.png",
+  "/tool/js.png",
+  "/tool/ts.png",
+  "/tool/react.png",
+  "/tool/next.png",
+  "/tool/vercel.png",
+  "/tool/github.png",
+  "/tool/MUI.png",
+  "/tool/radixUI.png",
+  "/tool/motiondev.png",
   "/tool/tailwind.png",
   "/tool/astro.png",
   "/tool/html.png",
@@ -21,6 +35,20 @@ const frontendToolsMob = [
   "/tool/react.png",
   "/tool/next.png",
   "/tool/vercel.png",
+  "/tool/motiondev.png",
+  "/tool/github.png",
+  "/tool/MUI.png",
+  "/tool/radixUI.png",
+  "/tool/tailwind.png",
+  "/tool/astro.png",
+  "/tool/html.png",
+  "/tool/css.png",
+  "/tool/js.png",
+  "/tool/ts.png",
+  "/tool/react.png",
+  "/tool/next.png",
+  "/tool/vercel.png",
+  "/tool/motiondev.png",
   "/tool/github.png",
   "/tool/MUI.png",
   "/tool/radixUI.png",
@@ -32,7 +60,7 @@ const frontendToolsMob = [
 
 const RunBanner = () => {
   return (
-    <div className="overflow-hidden mt-[150px] flex flex-col md:gap-5 -mb-[50px] whitespace-nowrap w-full py-4">
+    <div className="overflow-hidden flex flex-col md:gap-5 whitespace-nowrap w-full py-4">
       <div className="inline-block animate-marquee">
         {[...frontendTools, ...frontendTools].map((src, index) => (
           <div key={index} className="inline-block mx-2 md:mx-6">
@@ -41,7 +69,7 @@ const RunBanner = () => {
               alt={`Tool ${index}`}
               width={50}
               height={50}
-              className="object-contain md:hidden"
+              className="object-contain md:hidden rounded-md"
             />
             <Image
               src={src}

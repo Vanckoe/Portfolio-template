@@ -6,7 +6,7 @@ import RunBunner from "./_components/runBunner";
 
 const About = () => {
   return (
-    <div className="flex flex-col mt-[20px]">
+    <div className="flex flex-col mt-[40px] gap-[200px]">
       <Hiro />
       <RunBunner />
       {/* <Second /> */}

@@ -6,7 +6,7 @@ const Stack = () => {
   const t = useTranslations("Projects");
 
   return (
-    <div className="w-full pb-[100px] pt-[200px] md:py-[150px]">
+    <div className="w-full pb-[100px]">
       <div className="flex flex-col justify-between  mx-auto container relative px-[30px] gap-20">
         <h1 className="-mb-10 text-6xl">
           {/* What I’ve Built */}

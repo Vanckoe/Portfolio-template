@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useCallback, useState } from "react";
-// import Button from "@/components/button";
+import Button from "@/components/button";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { GithubIcon } from "@/assets/liveIcons/Git";
@@ -45,17 +45,16 @@ const Hiro = () => {
             src="https://sketchfab.com/models/4d11fdf6d57a4fda924e9e5623602022/embed?autostart=1&transparent=1&ui_theme=dark"
           />
         </div>
+        {/* <p className="text-start text-xl mt-4">
+          {t("years")}
+        </p> */}
+        <div className="flex flex-col md:flex-row w-full md:justify-between md:items-start">
+          <h1 className="text-nowrap">
+            {/* Adil Talasbek */}
+            {t("title")}
+          </h1>
 
-        <h1>
-          {/* Adil Talasbek */}
-          {t("title")}
-        </h1>
-        <div className="flex flex-col md:flex-row w-full md:justify-between md:items-center">
-          <p className="text-start">
-            {/* 22 y.o */}
-            {t("years")}
-          </p>
-          <p className="md:text-end">
+          <p className="md:text-end text-2xl">
             {/* 3 year e-commerce experience */}
             {t("ecom")}
             <br />
@@ -65,7 +64,7 @@ const Hiro = () => {
         </div>
       </div>
       <div className="flex flex-col gap-5 md:w-[50%] ">
-        <div className="flex flex-col items-start h-full w-full  md:px-5 justify-between">
+        <div className="flex flex-col items-start h-full w-full justify-between">
           <div className="h-full flex flex-col gap-2 text-xl">
             <p className="text-2xl mb-3">
               {t("subtitle")}
@@ -100,10 +99,10 @@ const Hiro = () => {
               className="flexflex-row opacity-80 hover:opacity-100 items-center gap-3"
             >
               <Link
-                href={"https://t.me/Vanckoe21"}
+                href={"https://t.me/Vanckoe"}
                 className="hover:underline text-xl"
               >
-                @Vanckoe21
+                @Vanckoe
               </Link>
             </CheckCheckIcon>
 
@@ -126,11 +125,12 @@ const Hiro = () => {
               </Link>
             </MailCheckIcon>
           </div>
-          {/* <Link href={"/about"} className="w-full">
-            <Button className="md:w-full mt-10">
-              {t("about")}
-            </Button>
-          </Link> */}
+          <div className="flex flex-col w-full md:w-[80%] mt-10 gap-3">
+            <p className="">{t("hr")}^_^</p>
+            <a download href="/Adil.pdf" className="w-full">
+              <Button className="md:w-full">{t("about")}</Button>
+            </a>
+          </div>
         </div>
       </div>
     </div>
