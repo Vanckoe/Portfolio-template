@@ -19,6 +19,12 @@ const Stack = () => {
           stack="Astro, TypeScript, Calendly, Lozad"
         />
         <SiteBlock
+          title={t("project7.title")}
+          description={t("project7.description")}
+          link="https://zypher-six.vercel.app"
+          stack="Next.js, TypeScript, Tailwind, Framer Motion"
+        />
+        <SiteBlock
           title={t("project6.title")}
           description={t("project6.description")}
           link="https://gorkytheater.ru/"
@@ -28,7 +34,7 @@ const Stack = () => {
         <SiteBlock
           title={t("project2.title")}
           description={t("project2.description")}
-          link="https://kcmg.kz/"
+          link="https://kcmg.vercel.app/"
           className="bg-white"
           stack="Nextjs, TypeScript, Tailwind, i18n"
         />

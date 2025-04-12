@@ -40,6 +40,10 @@
     "project6": {
       "title": "Gorky Theater",
       "description": "Multi-page theater website with playbill, ticket sales, and details about performances and cast. Implemented responsive layout, event filtering, and integration with an external booking system."
+    },
+    "project7": {
+      "title": "Zypher",
+      "description": "A portfolio website for a video editor. Built with a minimalist interface, responsive layout, smooth scrolling, and animated sections. Utilizes custom animations with Framer Motion and optimized video loading. All elements are focused on showcasing the editor's style and work."
     }
   }
 }

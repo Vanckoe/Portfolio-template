@@ -1,8 +1,8 @@
 import React from "react";
 import Hiro from "./_components/hiro";
 // import Second from "./_components/second";
-import Stack from "./_components/stack";
 import RunBunner from "./_components/runBunner";
+import ClientStack from "./_components/client-stack";
 
 const About = () => {
   return (
@@ -10,7 +10,7 @@ const About = () => {
       <Hiro />
       <RunBunner />
       {/* <Second /> */}
-      <Stack />
+      <ClientStack />
       {/* <Second /> */}
     </div>
   );
