@@ -15,6 +15,7 @@
   },
   "Projects": {
     "generaltitle": "What I’ve Built",
+    "design": "Designed by: ",
     "stack": "Stack",
     "previewError": "Preview not available",
     "project1": {
@@ -44,6 +45,14 @@
     "project7": {
       "title": "Zypher",
       "description": "A portfolio website for a video editor. Built with a minimalist interface, responsive layout, smooth scrolling, and animated sections. Utilizes custom animations with Framer Motion and optimized video loading. All elements are focused on showcasing the editor's style and work."
+    },
+    "project8": {
+      "title": "Visa Group",
+      "description": "Landing page for a migration company with pixel-perfect and fluid layout. Features lead submission, responsive design, and smooth animations."
+    },
+    "project9": {
+      "title": "YouAcademy",
+      "description": "Landing page for an online academy with pixel-perfect and fluid layout. Leads are sent to a Telegram bot and Google Sheets."
     }
   }
 }

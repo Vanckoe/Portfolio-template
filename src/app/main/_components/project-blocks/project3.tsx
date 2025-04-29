@@ -12,6 +12,8 @@ const Project3 = () => {
       link="https://atmosfera.spa/"
       className="bg-white"
       stack="Nextjs, TypeScript"
+      design="🇰🇿 @scliqu"
+      designLink="https://t.me/scliqu"
     />
   );
 };

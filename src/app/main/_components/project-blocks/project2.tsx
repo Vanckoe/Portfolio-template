@@ -12,6 +12,8 @@ const Project2 = () => {
       link="https://kcmg.vercel.app/"
       className="bg-white"
       stack="Nextjs, TypeScript, Tailwind, i18n"
+      design="🇰🇿 @scliqu"
+      designLink="https://t.me/scliqu"
     />
   );
 };

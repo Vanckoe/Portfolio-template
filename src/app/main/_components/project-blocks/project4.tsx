@@ -12,6 +12,8 @@ const Project4 = () => {
       link="https://gasyr-ent.vercel.app/"
       className="bg-white"
       stack="Nextjs, TypeScript, Tailwind, HeadlessUI, Radix, Openai, Sentry, Motion.dev"
+      design="🇰🇿 @scliqu"
+      designLink="https://t.me/scliqu"
     />
   );
 };

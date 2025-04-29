@@ -11,6 +11,8 @@ const Project6 = () => {
       description={t("project7.description")}
       link="https://zypher-six.vercel.app"
       stack="Next.js, TypeScript, Tailwind, Framer Motion"
+      design="🇰🇿 @Vanckoe"
+      designLink="https://t.me/Vanckoe"
     />
   );
 };

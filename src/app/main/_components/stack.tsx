@@ -1,3 +1,4 @@
+
 import React, { Suspense } from "react";
 import { useTranslations } from "next-intl";
 import dynamic from 'next/dynamic';
@@ -31,6 +32,14 @@ const Project6 = dynamic(() => import("./project-blocks/project6"), {
   loading: () => <div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>,
   ssr: false
 });
+const Project7 = dynamic(() => import("./project-blocks/project7"), {
+  loading: () => <div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>,
+  ssr: false
+});
+const Project8 = dynamic(() => import("./project-blocks/project8"), {
+  loading: () => <div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>,
+  ssr: false
+});
 
 const Stack = () => {
   const t = useTranslations("Projects");
@@ -43,7 +52,13 @@ const Stack = () => {
           <Project1 />
         </Suspense>
         <Suspense fallback={<div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>}>
+          <Project7 />
+        </Suspense>
+        <Suspense fallback={<div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>}>
           <Project6 />
+        </Suspense>
+        <Suspense fallback={<div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>}>
+          <Project8 />
         </Suspense>
         <Suspense fallback={<div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>}>
           <Project5 />
@@ -57,6 +72,7 @@ const Stack = () => {
         <Suspense fallback={<div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>}>
           <Project4 />
         </Suspense>
+        
       </div>
     </div>
   );

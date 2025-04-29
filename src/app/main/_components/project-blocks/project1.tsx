@@ -11,6 +11,8 @@ const Project1 = () => {
       description={t("project1.description")}
       link="https://artlumia-1.vercel.app"
       stack="Astro, TypeScript, Calendly, Lozad"
+      design="🇰🇿 @scliqu"
+      designLink="https://t.me/scliqu"
     />
   );
 };

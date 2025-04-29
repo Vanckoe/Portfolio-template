@@ -1,9 +1,11 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
 import { LinkIcon } from "@/assets/liveIcons/Link";
 import Link from "next/link";
 import { cn } from "@/utils/cn";
 import { useTranslations } from "next-intl";
 import GlowLink from "./gradient";
+import { CheckCheckIcon } from "@/assets/liveIcons/Check";
 // import Button from "@/components/button";
 
 type SiteProps = {
@@ -12,6 +14,8 @@ type SiteProps = {
   link?: string;
   className?: string;
   stack?: string;
+  design?: string;
+  designLink?: string;
 };
 
 const SiteBlock: React.FC<SiteProps> = ({
@@ -20,6 +24,8 @@ const SiteBlock: React.FC<SiteProps> = ({
   link,
   className,
   stack,
+  design,
+  designLink,
 }) => {
   const t = useTranslations("Projects");
 
@@ -29,7 +35,7 @@ const SiteBlock: React.FC<SiteProps> = ({
         <div className="flex flex-col w-full">
           <iframe
             src={link}
-            className={cn(className, "w-full h-[50vh] border-none")}
+            className={cn(className, "w-full h-[25rem] border-none")}
           ></iframe>
           <div className="mt-7 md:hidden">
             <GlowLink href={link || "#"}>Перейти на сайт</GlowLink>
@@ -37,7 +43,7 @@ const SiteBlock: React.FC<SiteProps> = ({
         </div>
       ) : (
         <div className="flex flex-col w-full">
-          <div className="w-full h-[50vh] flex items-center justify-center border border-gray-300">
+          <div className="w-full h-[25rem] flex items-center justify-center border border-gray-300">
             <p className="text-gray-500">{t("previewError")}</p>
           </div>
           <div className="mt-7 md:hidden">
@@ -50,7 +56,7 @@ const SiteBlock: React.FC<SiteProps> = ({
         <div className="flex flex-col">
           <h2 className="text-5xl font-semibold">{title}</h2>
 
-          {link && (
+          {/* {link && (
             <LinkIcon
               size={20}
               className="flex mt-5 flex-row w-fit text-white opacity-80 hover:opacity-100 items-center gap-3"
@@ -59,8 +65,17 @@ const SiteBlock: React.FC<SiteProps> = ({
                 {link}
               </Link>
             </LinkIcon>
+          )} */}
+          {design && (
+            <CheckCheckIcon
+              size={20}
+              className="flex mt-5 flex-row w-fit text-white opacity-80 hover:opacity-100 items-center gap-3"
+            >
+              <Link href={designLink || '#'} target="_blank" rel="noopener noreferrer">
+              <span className="font-bold"> {t("design")} </span> {design}
+              </Link>
+            </CheckCheckIcon>
           )}
-
           {description && <p className="mt-2">{description}</p>}
 
           {stack && (
@@ -68,6 +83,7 @@ const SiteBlock: React.FC<SiteProps> = ({
               {t("stack")}: <span className="font-bold"> {stack}</span>
             </p>
           )}
+          
         </div>
         <div className="mt-5 hidden md:block">
           <GlowLink href={link || "#"}>Перейти на сайт</GlowLink>
