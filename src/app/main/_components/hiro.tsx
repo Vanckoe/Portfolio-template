@@ -1,32 +1,32 @@
 "use client";
 import React from "react";
-import { useCallback, useState } from "react";
+// import { useCallback, useState } from "react";
 import Button from "@/components/button";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { GithubIcon } from "@/assets/liveIcons/Git";
 import { InstagramIcon } from "@/assets/liveIcons/Insta";
-import { MailCheckIcon } from "@/assets/liveIcons/Mail";
+// import { MailCheckIcon } from "@/assets/liveIcons/Mail";
 import { CheckCheckIcon } from "@/assets/liveIcons/Check";
 
 const Hiro = () => {
   const t = useTranslations("Main");
 
-  const [copied, setCopied] = useState(false);
+  // const [copied, setCopied] = useState(false);
 
-  const handleCopy = useCallback(
-    async (e: React.MouseEvent<HTMLAnchorElement>) => {
-      e.preventDefault();
-      try {
-        await navigator.clipboard.writeText("adiltalasbek@gmail.com");
-        setCopied(true);
-        setTimeout(() => setCopied(false), 2000); // Убираем статус через 2 сек
-      } catch (err) {
-        console.error("Ошибка при копировании:", err);
-      }
-    },
-    []
-  );
+  // const handleCopy = useCallback(
+  //   async (e: React.MouseEvent<HTMLAnchorElement>) => {
+  //     e.preventDefault();
+  //     try {
+  //       await navigator.clipboard.writeText("adiltalasbek@gmail.com");
+  //       setCopied(true);
+  //       setTimeout(() => setCopied(false), 2000); // Убираем статус через 2 сек
+  //     } catch (err) {
+  //       console.error("Ошибка при копировании:", err);
+  //     }
+  //   },
+  //   []
+  // );
 
   return (
     <div className="flex w-full flex-col md:flex-row mx-auto container relative px-[1.875rem] items-stretch gap-5">
@@ -104,7 +104,7 @@ const Hiro = () => {
               </Link>
             </CheckCheckIcon>
 
-            <MailCheckIcon
+            {/* <MailCheckIcon
               size={20}
               className="flexflex-row opacity-80 hover:opacity-100 items-center gap-3"
             >
@@ -116,12 +116,11 @@ const Hiro = () => {
                 adiltalasbek@gmail.com
                 {copied && (
                   <span className="absolute top-full left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs rounded-[0.1875rem] px-2 py-1 mt-1">
-                    {/* Скопировано! */}
                     {t("copy")}
                   </span>
                 )}
               </Link>
-            </MailCheckIcon>
+            </MailCheckIcon> */}
           </div>
           <div className="flex flex-col w-full md:w-[80%] mt-10 gap-3">
             <p className="">{t("hr")}^_^</p>
