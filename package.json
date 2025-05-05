@@ -6,7 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write ."
+
   },
   "dependencies": {
     "@next/font": "^14.2.15",
@@ -17,13 +19,18 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cn": "^0.1.1",
+    "d3": "^7.9.0",
+    "eslint-config-prettier": "^10.1.2",
     "framer-motion": "^12.5.0",
+    "geojson": "^0.5.0",
     "lucide-react": "^0.483.0",
     "motion": "^12.5.0",
     "next": "15.0.3",
     "next-intl": "^3.25.3",
+    "prettier": "^3.5.3",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
+    "react-simple-maps": "^3.0.0",
     "react-spinners": "^0.14.1",
     "tailwind-merge": "^3.0.2",
     "tailwindcss-animate": "^1.0.7",
@@ -32,13 +39,16 @@
     "zsa-react-query": "^0.2.1"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@types/d3-fetch": "^3.0.7",
+    "@types/d3-scale": "^4.0.9",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-simple-maps": "^3.0.6",
+    "eslint": "^8",
+    "eslint-config-next": "15.0.3",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "15.0.3"
+    "typescript": "^5"
   }
 }

@@ -63,7 +63,7 @@ const frontendToolsMob = [
 
 const RunBanner = () => {
   return (
-    <div className="overflow-hidden flex flex-col md:gap-5 whitespace-nowrap w-full py-4">
+    <div className="overflow mt-20 flex flex-col md:gap-5 whitespace-nowrap w-full py-4">
       <div className="inline-block animate-marquee">
         {[...frontendTools, ...frontendTools].map((src, index) => (
           <div key={index} className="inline-block mx-2 md:mx-6">
