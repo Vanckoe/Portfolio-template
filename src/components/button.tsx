@@ -3,25 +3,25 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/utils/cn";
 
 const buttonVariants = cva(
-  "xs:py-6 xs:text-[18px] flex items-center justify-center gap-[10px] text-nowrap transition-colors duration-150",
+  "xs:py-6 xs:text-[1.125rem] flex items-center justify-center gap-[0.625rem] text-nowrap transition-colors duration-150",
   {
     variants: {
       variant: {
         primary:
-          "w-full md:w-fit bg-[#FFFFFF] border border-white text-base font-bold px-[55px] py-4 text-[#224A87] hover:bg-opacity-30 hover:text-white active:bg-opacity-50",
+          "w-full md:w-fit bg-[#FFFFFF] border border-white text-base font-bold px-[3.4375rem] py-4 text-[#224A87] hover:bg-opacity-30 hover:text-white active:bg-opacity-50",
         primaryFull:
           "w-full bg-[#004FFF] text-[#FFFFFF] hover:bg-[#4981FF] active:bg-[#B1C9FF]",
         secondary:
-          "max-h-[72px] w-full rounded-[10px] border border-[#848484] bg-white text-[#848484] font-semibold hover:border-[#4981FF] hover:bg-[#4981FF] hover:text-white active:bg-[#004FFF] active:text-white",
+          "max-h-[4.5rem] w-full rounded-[0.625rem] border border-[#848484] bg-white text-[#848484] font-semibold hover:border-[#4981FF] hover:bg-[#4981FF] hover:text-white active:bg-[#004FFF] active:text-white",
         white:
-          "max-h-[70px] w-fit border-none bg-white px-10 py-6 text-sm md:text-2xl font-semibold text-[#004FFF] hover:bg-[#CEDDFF] active:bg-[#004FFF] active:text-white",
+          "max-h-[4.375rem] w-fit border-none bg-white px-10 py-6 text-sm md:text-2xl font-semibold text-[#004FFF] hover:bg-[#CEDDFF] active:bg-[#004FFF] active:text-white",
         whiteFull:
-          "max-h-[70px] w-full border border-[#004FFF] bg-white px-10 text-base font-semibold text-[#004FFF] hover:bg-[#CEDDFF] active:bg-[#004FFF] active:text-white",
-        gray: "w-full md:max-w-[283px] bg-[#F2F2F2] text-[#ACACAC] hover:bg-[#4981FF] hover:text-white active:bg-[#B1C9FF]",
+          "max-h-[4.375rem] w-full border border-[#004FFF] bg-white px-10 text-base font-semibold text-[#004FFF] hover:bg-[#CEDDFF] active:bg-[#004FFF] active:text-white",
+        gray: "w-full md:max-w-[17.6875rem] bg-[#F2F2F2] text-[#ACACAC] hover:bg-[#4981FF] hover:text-white active:bg-[#B1C9FF]",
         miniBlue:
-          "py-[10px] px-5 rounded-[20px] bg-[#004FFF] text-white text-base font-medium border border-[#004FFF] hover:text-[#004FFF] hover:bg-[#CEDDFF] active:bg-white active:text-[#004FFF]",
+          "py-[0.625rem] px-5 rounded-[1.25rem] bg-[#004FFF] text-white text-base font-medium border border-[#004FFF] hover:text-[#004FFF] hover:bg-[#CEDDFF] active:bg-white active:text-[#004FFF]",
         miniWhite:
-          "py-[10px] px-5 rounded-[20px] bg-white text-[#004FFF] text-base font-medium border border-[#004FFF] hover:text-[#004FFF] hover:bg-[#CEDDFF] active:bg-white active:text-[#004FFF]",
+          "py-[0.625rem] px-5 rounded-[1.25rem] bg-white text-[#004FFF] text-base font-medium border border-[#004FFF] hover:text-[#004FFF] hover:bg-[#CEDDFF] active:bg-white active:text-[#004FFF]",
       },
     },
     defaultVariants: {

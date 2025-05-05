@@ -45,8 +45,8 @@ const Stack = () => {
   const t = useTranslations("Projects");
 
   return (
-    <div className="w-full pb-[100px]">
-      <div className="flex flex-col justify-between mx-auto container relative px-[30px] gap-20">
+    <div className="w-full pb-[6.25rem]">
+      <div className="flex flex-col justify-between mx-auto container relative px-[1.875rem] gap-20">
         <h1 className="-mb-10 text-6xl">{t("generaltitle")}</h1>
         <Suspense fallback={<div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>}>
           <Project1 />

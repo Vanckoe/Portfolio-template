@@ -7,7 +7,7 @@ import MapChart from './_components/map';
 
 const About = () => {
   return (
-    <div className="flex flex-col mt-[40px]">
+    <div className="flex flex-col mt-10">
       <Hiro />
       <RunBunner />
       <MapChart />
