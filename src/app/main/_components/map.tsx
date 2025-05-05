@@ -7,11 +7,14 @@ import {
   Sphere,
   Graticule,
 } from 'react-simple-maps';
+import { useTranslations } from 'next-intl';
 
 const geoUrl = '/features.json';
-const highlightedCountries = ['KAZ', 'USA', 'UKR', 'RUS', 'SAU'];
+const highlightedCountries = ['KAZ', 'USA', 'UKR', 'RUS', 'SAU', 'BGD'];
 
 export default function MapChart() {
+  const t = useTranslations('Map');
+
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -23,18 +26,13 @@ export default function MapChart() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center w-full h-full">
-      <h1 className="-mb-32 text-6xl">Где живут мои проекты</h1>
-      
+    <div className="flex flex-col relative my-36 gap-14 items-center justify-center w-full">
+      <h1 className="hidden md:block px-5 text-center text-6xl md:text-7xl">{t('title')}</h1>
       <ComposableMap
-        projectionConfig={{
-          scale: 147,
-          center: [0, 0]
-        }}
-        style={{
-          width: "100%",
-          height: "auto",
-        }}
+        projection="geoNaturalEarth1"
+        width={1000}
+        height={500}
+        viewBox="0 0 1000 500"
       >
         <Sphere id="sphere" stroke="#E4E5E650" strokeWidth={0.16} fill="none" />
         <Graticule stroke="#E4E5E650" strokeWidth={0.1} />
@@ -52,7 +50,7 @@ export default function MapChart() {
                 strokeWidth={0.4}
                 style={{
                   default: { outline: 'none' },
-                  hover: { outline: 'none' },
+                  hover: { outline: 'none', },
                   pressed: { outline: 'none' },
                 }}
               />
@@ -60,6 +58,13 @@ export default function MapChart() {
           }
         </Geographies>
       </ComposableMap>
+      <h1 className=" md:hidden -mb-7 -mt-40 px-5 text-center text-7xl leading-[84%] md:text-7xl">{t('title')}</h1>
+      <p className="font-medium hidden py-3 px-10 bg-white text-black -mt-28 rounded-3xl md:block text-center text-xl">
+        {t('subtitleTop')} <br className='hidden md:block'/>{t("subtitleBottom")}
+      </p>
+      <p className="font-medium  md:hidden px-7 text-center text-xl">
+        {t('subtitleTop')} <br className='hidden md:block'/>{t("subtitleBottom")}
+      </p>
     </div>
   );
 }

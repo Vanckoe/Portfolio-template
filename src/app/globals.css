@@ -1,10 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* Reset and base styles  */
+
+html {
+  font-size: 1vw;
+}
 * {
-  padding: 0px;
-  margin: 0px;
+  padding: 0rem;
+  margin: 0rem;
 }
 
 *,
@@ -108,9 +111,9 @@ label {
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 3rem;        /* 48px -> 3rem */
   font-weight: 600;
-  line-height: 70.4px;
+  line-height: 4.4rem;    /* 70.4px -> 4.4rem */
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
@@ -118,38 +121,28 @@ h1 {
 
 /* Для телефонов (максимальная ширина 767px) */
 @media (max-width: 767px) {
+  html {
+    font-size: 3.334vw;
+  }
   h1 {
     font-family: Manrope;
-    font-size: 32px;
+    font-size: 2rem;      /* 32px -> 2rem */
     font-weight: 600;
-    line-height: 52px;
+    line-height: 3.25rem; /* 52px -> 3.25rem */
     letter-spacing: -0.03em;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
   }
   .container {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 1.875rem;  /* 30px -> 1.875rem */
+    width: 100%;
+    padding-right: 1.875rem; /* 30px -> 1.875rem */
   }
 }
-
-/* Для планшетов (минимальная ширина 768px и максимальная ширина 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
-  h1 {
-    font-family: Manrope;
-    font-size: 52px;
-    font-weight: 600;
-    line-height: 70px;
-    letter-spacing: -0.03em;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-  }
-}
-@media (min-width: 1170px) {
+@media (min-width: 767px) {
   .container {
-    max-width: 1170px;
+    width: 80rem; 
   }
 }
 
@@ -201,7 +194,7 @@ legend {
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --radius: 0.5rem;
+    --radius: 0.5rem;  /* Оставляем как есть, так как уже в rem */
   }
   .dark {
     --background: 0 0% 3.9%;

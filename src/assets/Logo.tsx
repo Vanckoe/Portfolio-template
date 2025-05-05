@@ -29,7 +29,7 @@ const Cube: React.FC<LogoProps> = ({ color = "white" }) => {
 
 export default function ThreeScene() {
   return (
-    <div className="w-[80px] h-[80px] bg-transparent">
+    <div className="w-[6rem] h-[6rem] bg-transparent">
       <Canvas camera={{ position: [0, 0, 5], fov: 25 }}>
         <ambientLight intensity={0.3} />
         <directionalLight position={[2, 2, 2]} intensity={0.5} />

@@ -62,7 +62,7 @@ const HeaderMain = () => {
     //     : "absolute top-0 left-0 z-50 bg-transparent"
     // } w-full transition-all duration-300`}
     >
-      <div className="mx-auto container relative px-[30px]">
+      <div className="mx-auto container relative px-[1.875rem]">
         <header
           className={`flex flex-row items-center w-full gap-5 justify-between`}
         >
