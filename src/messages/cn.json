@@ -54,5 +54,10 @@
       "title": "YouAcademy",
       "description": "Landing page for an online academy with pixel-perfect and fluid layout. Leads are sent to a Telegram bot and Google Sheets."
     }
+  },
+  "Map": {
+    "title": "With a focus on globality",
+    "subtitleTop": "Geography does not limit the quality. I work with clients all over the world",
+    "subtitleBottom": "and make websites that convert, impress, and run smoothly."
   }
 }

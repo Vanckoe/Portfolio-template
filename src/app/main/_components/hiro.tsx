@@ -29,7 +29,7 @@ const Hiro = () => {
   );
 
   return (
-    <div className="flex w-full flex-col md:flex-row  mx-auto container relative px-[30px] items-stretch gap-5">
+    <div className="flex w-full flex-col md:flex-row mx-auto container relative px-[1.875rem] items-stretch gap-5">
       <div className="w-full flex flex-col items-start">
         <div className="w-full aspect-video">
           <iframe
@@ -63,13 +63,11 @@ const Hiro = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col gap-5 md:w-[50%] ">
+      <div className="flex flex-col gap-5 md:w-[50%]">
         <div className="flex flex-col items-start h-full w-full justify-between">
           <div className="h-full flex flex-col gap-2 text-xl">
             <p className="text-2xl mb-3">
               {t("subtitle")}
-              {/* Front-end Developer focused on creating great user interfaces;
-              developing web applications using React and Next.js */}
             </p>
             <GithubIcon
               size={20}
@@ -117,7 +115,7 @@ const Hiro = () => {
               >
                 adiltalasbek@gmail.com
                 {copied && (
-                  <span className="absolute top-full left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs rounded-[3px] px-2 py-1 mt-1">
+                  <span className="absolute top-full left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs rounded-[0.1875rem] px-2 py-1 mt-1">
                     {/* Скопировано! */}
                     {t("copy")}
                   </span>
