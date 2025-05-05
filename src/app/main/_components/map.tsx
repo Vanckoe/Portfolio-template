@@ -10,7 +10,7 @@ import {
 import { useTranslations } from 'next-intl';
 
 const geoUrl = '/features.json';
-const highlightedCountries = ['KAZ', 'USA', 'UKR', 'RUS', 'SAU', 'BGD'];
+const highlightedCountries = ['KAZ', 'USA', 'UKR', 'RUS', 'IND'];
 
 export default function MapChart() {
   const t = useTranslations('Map');
