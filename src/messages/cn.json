@@ -53,6 +53,10 @@
     "project9": {
       "title": "YouAcademy",
       "description": "Landing page for an online academy with pixel-perfect and fluid layout. Leads are sent to a Telegram bot and Google Sheets."
+    },
+    "project10": {
+      "title": "Alieva Sabina",
+      "description": "Portfolio website for an opera singer with a captivating and atmospheric design. Features a fluid layout and immersive visuals. Lead submission through Telegram bot, emphasizing artistic presentation and user engagement."
     }
   },
   "Map": {

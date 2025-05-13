@@ -40,6 +40,10 @@ const Project8 = dynamic(() => import("./project-blocks/project8"), {
   loading: () => <div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>,
   ssr: false
 });
+const Project9 = dynamic(() => import("./project-blocks/project9"), {
+  loading: () => <div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>,
+  ssr: false
+});
 
 const Stack = () => {
   const t = useTranslations("Projects");
@@ -50,6 +54,9 @@ const Stack = () => {
         <h1 className="-mb-10 text-6xl">{t("generaltitle")}</h1>
         <Suspense fallback={<div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>}>
           <Project1 />
+        </Suspense>
+        <Suspense fallback={<div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>}>
+          <Project9 />
         </Suspense>
         <Suspense fallback={<div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>}>
           <Project7 />
