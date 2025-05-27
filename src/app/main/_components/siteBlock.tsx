@@ -6,6 +6,7 @@ import { cn } from "@/utils/cn";
 import { useTranslations } from "next-intl";
 import GlowLink from "./gradient";
 import { CheckCheckIcon } from "@/assets/liveIcons/Check";
+import CanvasPreview from "@/components/ui/sitePreview";
 // import Button from "@/components/button";
 
 type SiteProps = {
@@ -33,10 +34,12 @@ const SiteBlock: React.FC<SiteProps> = ({
     <div className="flex md:flex-row  flex-col-reverse gap-10 items-start">
       {link ? (
         <div className="flex flex-col w-full">
-          <iframe
+          {/* <iframe
             src={link}
             className={cn(className, "w-full h-[25rem] border-none")}
-          ></iframe>
+          ></iframe> */}
+          {/* <p className="">{link}</p> */}
+          <CanvasPreview url={link} />
           <div className="mt-7 md:hidden">
             <GlowLink href={link || "#"}>Перейти на сайт</GlowLink>
           </div>
