@@ -89,7 +89,7 @@ const SiteBlock: React.FC<SiteProps> = ({
           
         </div>
         <div className="mt-5 hidden md:block">
-          <GlowLink href={link || "#"}>Перейти на сайт</GlowLink>
+          <GlowLink href={link || "#"}>{t("moveToTheSite")}</GlowLink>
         </div>
         {/* <Button className="">Перейти на сайт</Button> */}
       </div>

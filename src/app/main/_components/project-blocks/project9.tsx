@@ -11,7 +11,7 @@ const Project1 = () => {
       description={t("project10.description")}
       link="https://sabina-pi.vercel.app/"
       stack="Nextjs, TypeScript, Canvas, Tailwind, TelegramAPI, AOS"
-      design="Редизайн 🇺🇦 @v_maslyanik"
+      design={t("redesign")}
       designLink="https://t.me/+o_LQSv0jojg3Y2Zi"
     />
   );
