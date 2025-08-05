@@ -59,6 +59,14 @@
     "project10": {
       "title": "Alieva Sabina",
       "description": "Portfolio website for an opera singer with a captivating and atmospheric design. Features a fluid layout and immersive visuals. Lead submission through Telegram bot, emphasizing artistic presentation and user engagement."
+    },
+    "project11": {
+      "title": "SeoMarket",
+      "description": "Multi-language marketing agency website with SEO and PPC service descriptions. Built with a responsive layout, locale-based routing, and optimized for static export. Features pixel-perfect design, smooth animations, and clear service presentation. Includes lead submission via EmailJS."
+    },
+    "project12": {
+      "title": "Everest Prime Services",
+      "description": "Website for a service company with a modern responsive design. Features a clear section structure, intuitive navigation, and an online booking form. Includes smooth animations, branded colors, and a focus on showcasing services. Integrated for lead submission and client notifications."
     }
   },
   "Map": {
