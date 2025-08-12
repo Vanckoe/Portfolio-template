@@ -10,7 +10,17 @@ import {
 import { useTranslations } from 'next-intl';
 
 const geoUrl = '/features.json';
-const highlightedCountries = ['KAZ', 'USA', 'UKR', 'RUS', 'IND', 'CHN', 'AZE'];
+const highlightedCountries = [
+  'KAZ',
+  'USA',
+  'UKR',
+  'RUS',
+  'IND',
+  'CHN',
+  'AZE',
+  'IRN',
+  'ISR',
+];
 
 export default function MapChart() {
   const t = useTranslations('Map');
@@ -27,7 +37,9 @@ export default function MapChart() {
 
   return (
     <div className="flex flex-col relative my-36 gap-14 items-center justify-center w-full">
-      <h1 className="hidden md:block px-5 text-center text-6xl md:text-7xl">{t('title')}</h1>
+      <h1 className="hidden md:block px-5 text-center text-6xl md:text-7xl">
+        {t('title')}
+      </h1>
       <ComposableMap
         projection="geoNaturalEarth1"
         width={1000}
@@ -50,7 +62,7 @@ export default function MapChart() {
                 strokeWidth={0.4}
                 style={{
                   default: { outline: 'none' },
-                  hover: { outline: 'none', },
+                  hover: { outline: 'none' },
                   pressed: { outline: 'none' },
                 }}
               />
@@ -58,12 +70,16 @@ export default function MapChart() {
           }
         </Geographies>
       </ComposableMap>
-      <h1 className=" md:hidden -mb-7 -mt-40 px-5 text-center text-7xl leading-[84%] md:text-7xl">{t('title')}</h1>
+      <h1 className=" md:hidden -mb-7 -mt-40 px-5 text-center text-7xl leading-[84%] md:text-7xl">
+        {t('title')}
+      </h1>
       <p className="font-medium hidden py-3 px-10 bg-white text-black -mt-28 rounded-3xl md:block text-center text-xl">
-        {t('subtitleTop')} <br className='hidden md:block'/>{t("subtitleBottom")}
+        {t('subtitleTop')} <br className="hidden md:block" />
+        {t('subtitleBottom')}
       </p>
       <p className="font-medium  md:hidden px-7 text-center text-xl">
-        {t('subtitleTop')} <br className='hidden md:block'/>{t("subtitleBottom")}
+        {t('subtitleTop')} <br className="hidden md:block" />
+        {t('subtitleBottom')}
       </p>
     </div>
   );
