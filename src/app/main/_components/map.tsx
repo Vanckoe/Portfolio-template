@@ -18,7 +18,7 @@ const highlightedCountries = [
   'IND',
   'CHN',
   'AZE',
-  'IRN',
+  'IRQ',
   'ISR',
 ];
 
