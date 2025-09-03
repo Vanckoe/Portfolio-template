@@ -1,16 +1,16 @@
-"use client";
-import React from "react";
+'use client';
+import React from 'react';
 // import { useCallback, useState } from "react";
-import Button from "@/components/button";
-import Link from "next/link";
-import { useTranslations } from "next-intl";
-import { GithubIcon } from "@/assets/liveIcons/Git";
-import { InstagramIcon } from "@/assets/liveIcons/Insta";
+import Button from '@/components/button';
+import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { GithubIcon } from '@/assets/liveIcons/Git';
+import { InstagramIcon } from '@/assets/liveIcons/Insta';
 // import { MailCheckIcon } from "@/assets/liveIcons/Mail";
-import { CheckCheckIcon } from "@/assets/liveIcons/Check";
+import { CheckCheckIcon } from '@/assets/liveIcons/Check';
 
 const Hiro = () => {
-  const t = useTranslations("Main");
+  const t = useTranslations('Main');
 
   // const [copied, setCopied] = useState(false);
 
@@ -35,7 +35,7 @@ const Hiro = () => {
           <iframe
             title="Robot Whale"
             className="w-full h-full border-0"
-            style={{ overflow: "hidden" }}
+            style={{ overflow: 'hidden' }}
             allowFullScreen
             allow="autoplay; fullscreen; xr-spatial-tracking"
             xr-spatial-tracking="true"
@@ -51,14 +51,14 @@ const Hiro = () => {
         <div className="flex flex-col md:flex-row w-full md:justify-between md:items-start">
           <h1 className="text-nowrap">
             {/* Adil Talasbek */}
-            {t("title")}
+            {t('title')}
           </h1>
 
           <p className="md:text-end text-2xl">
             {/* 3 year e-commerce experience */}
-            {t("ecom")}
+            {t('ecom')}
             <br />
-            {t("exp")}
+            {t('exp')}
             {/* 10+ project complited */}
           </p>
         </div>
@@ -66,16 +66,15 @@ const Hiro = () => {
       <div className="flex flex-col gap-5 md:w-[50%]">
         <div className="flex flex-col items-start h-full w-full justify-between">
           <div className="h-full flex flex-col gap-2 text-xl">
-            <p className="text-2xl mb-3">
-              {t("subtitle")}
-            </p>
+            <p className="text-2xl mb-3">{t('subtitle')}</p>
             <GithubIcon
               size={20}
               className="flex flex-row opacity-80 hover:opacity-100 items-center gap-3"
             >
               <Link
-                href={"https://github.com/Vanckoe"}
+                href={'https://github.com/Vanckoe'}
                 className="hover:underline text-xl"
+                data-cta="github"
               >
                 Vanckoe
               </Link>
@@ -85,8 +84,9 @@ const Hiro = () => {
               className="flexflex-row opacity-80 hover:opacity-100 items-center gap-3"
             >
               <Link
-                href={"https://www.instagram.com/born_in_the_steppe/?hl=ru"}
+                href={'https://www.instagram.com/born_in_the_steppe/?hl=ru'}
                 className="hover:underline text-xl"
+                data-cta="instagram"
               >
                 @born_in_the_steppe
               </Link>
@@ -97,7 +97,8 @@ const Hiro = () => {
               className="flexflex-row opacity-80 hover:opacity-100 items-center gap-3"
             >
               <Link
-                href={"https://t.me/Vanckoe"}
+                href={'https://t.me/Vanckoe'}
+                data-cta="telegram"
                 className="hover:underline text-xl"
               >
                 @Vanckoe
@@ -123,9 +124,9 @@ const Hiro = () => {
             </MailCheckIcon> */}
           </div>
           <div className="flex flex-col w-full md:w-[80%] mt-10 gap-3">
-            <p className="">{t("hr")}^_^</p>
+            <p className="">{t('hr')}^_^</p>
             <a download href="/Adil.pdf" className="w-full">
-              <Button className="md:w-full">{t("about")}</Button>
+              <Button className="md:w-full">{t('about')}</Button>
             </a>
           </div>
         </div>

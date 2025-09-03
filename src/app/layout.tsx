@@ -1,20 +1,21 @@
-import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
-import "./globals.css";
-import HeaderMain from "@/components/header";
-import Footer from "@/components/footer";
-import { NextIntlClientProvider } from "next-intl";
-import { getLocale, getMessages } from "next-intl/server";
-import QueryProvider from "@/components/QueryProvider";
+import type { Metadata } from 'next';
+import { Manrope } from 'next/font/google';
+import './globals.css';
+import HeaderMain from '@/components/header';
+import Footer from '@/components/footer';
+import { NextIntlClientProvider } from 'next-intl';
+import { getLocale, getMessages } from 'next-intl/server';
+import QueryProvider from '@/components/QueryProvider';
+import PosthogLandingTracker from './PosthogLandingTracker';
 
 const manrope = Manrope({
-  subsets: ["latin", "cyrillic"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  subsets: ['latin', 'cyrillic'],
+  weight: ['300', '400', '500', '600', '700', '800'],
 });
 
 export const metadata: Metadata = {
-  title: "Vanckoe",
-  description: "Professional CV",
+  title: 'Vanckoe',
+  description: 'Professional CV',
 };
 
 export default async function RootLayout({
@@ -44,6 +45,7 @@ export default async function RootLayout({
             <HeaderMain />
             {children}
             <Footer />
+            <PosthogLandingTracker />
           </NextIntlClientProvider>
         </QueryProvider>
       </body>

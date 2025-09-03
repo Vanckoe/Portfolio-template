@@ -79,70 +79,70 @@ const Stack = () => {
             <div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>
           }
         >
-          <Project1 />
+          <Project1 data-cta="progect1" />
         </Suspense>
         <Suspense
           fallback={
             <div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>
           }
         >
-          <Project10 />
+          <Project10 data-cta="progect10" />
         </Suspense>
         <Suspense
           fallback={
             <div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>
           }
         >
-          <Project11 />
+          <Project11 data-cta="progect11" />
         </Suspense>
         <Suspense
           fallback={
             <div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>
           }
         >
-          <Project9 />
+          <Project9 data-cta="progect9" />
         </Suspense>
         <Suspense
           fallback={
             <div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>
           }
         >
-          <Project7 />
+          <Project7 data-cta="progect7" />
         </Suspense>
         <Suspense
           fallback={
             <div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>
           }
         >
-          <Project6 />
+          <Project6 data-cta="progect6" />
         </Suspense>
         <Suspense
           fallback={
             <div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>
           }
         >
-          <Project8 />
+          <Project8 data-cta="progect8" />
         </Suspense>
         <Suspense
           fallback={
             <div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>
           }
         >
-          <Project2 />
+          <Project2 data-cta="progect2" />
         </Suspense>
         <Suspense
           fallback={
             <div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>
           }
         >
-          <Project3 />
+          <Project3 data-cta="progect3" />
         </Suspense>
         <Suspense
           fallback={
             <div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>
           }
         >
-          <Project4 />
+          <Project4 data-cta="progect4" />
         </Suspense>
       </div>
     </div>
