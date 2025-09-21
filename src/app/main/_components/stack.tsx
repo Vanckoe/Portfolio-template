@@ -48,12 +48,12 @@ const Project8 = dynamic(() => import('./project-blocks/project8'), {
   ),
   ssr: false,
 });
-const Project9 = dynamic(() => import('./project-blocks/project9'), {
-  loading: () => (
-    <div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>
-  ),
-  ssr: false,
-});
+// const Project9 = dynamic(() => import('./project-blocks/project9'), {
+//   loading: () => (
+//     <div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>
+//   ),
+//   ssr: false,
+// });
 const Project10 = dynamic(() => import('./project-blocks/project10'), {
   loading: () => (
     <div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>
@@ -95,13 +95,13 @@ const Stack = () => {
         >
           <Project11 data-cta="progect11" />
         </Suspense>
-        <Suspense
+        {/* <Suspense
           fallback={
             <div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>
           }
         >
           <Project9 data-cta="progect9" />
-        </Suspense>
+        </Suspense> */}
         <Suspense
           fallback={
             <div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>
