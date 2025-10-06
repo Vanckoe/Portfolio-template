@@ -20,6 +20,7 @@ const highlightedCountries = [
   'AZE',
   'IRQ',
   'ISR',
+  'GBR',
 ];
 
 export default function MapChart() {
