@@ -24,7 +24,7 @@
     "geojson": "^0.5.0",
     "lucide-react": "^0.483.0",
     "motion": "^12.5.0",
-    "next": "15.0.3",
+    "next": "15.0.7",
     "next-intl": "^3.25.3",
     "posthog-js": "^1.261.6",
     "prettier": "^3.5.3",
