@@ -1,0 +1,30 @@
+import React from "react";
+
+type LogoNewProps = {
+  color?: string;
+  width?: string;
+  height?: string;
+};
+
+const LogoNew: React.FC<LogoNewProps> = ({
+  color = "#1da6d3",
+  width = "1rem",
+  height = "1rem",
+}) => {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 64 64"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M18.53 36.12 11.28 23.54c-.32-.55-.17-1.18.2-1.57s.99-.53 1.55-.28c6.46 3 13.34 4.33 20.38 2.65s12.94-6.58 17.15-12.65c.26-.37.66-.52 1.04-.55.42-.03.8.21 1.06.59.33.47.25 1.1-.03 1.6l-1.38 2.42-5.27 9.08-15.72 27.16c-.31.53-.71.84-1.3.85-.55.02-1-.32-1.3-.84l-9.15-15.89Z"
+        fill={color}
+      />
+    </svg>
+  );
+};
+
+export default LogoNew;

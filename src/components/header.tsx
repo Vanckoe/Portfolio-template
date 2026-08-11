@@ -2,11 +2,11 @@
 
 import React, { useState, useEffect } from "react";
 // import Link from "next/link";
-import Logo from "@/assets/Logo";
 import LanguageSwitcher from "./language-switcher";
 // import { useTranslations } from "next-intl";
 // import ActivityMenu from "./activityMenu";
 import { usePathname } from "next/navigation";
+import LogoNew from "@/assets/logo-new";
 
 const HeaderMain = () => {
   // const t = useTranslations("Navigation");
@@ -64,10 +64,9 @@ const HeaderMain = () => {
     >
       <div className="mx-auto container relative px-[1.875rem]">
         <header
-          className={`flex flex-row items-center w-full gap-5 justify-between`}
+          className={`flex flex-row items-center w-full gap-5 pt-7 pb-4 justify-between`}
         >
-          <Logo />
-
+          <LogoNew width="3rem" height="3rem" />
           {/* <div className="hidden md:flex flex-row items-center gap-10">
             <Link
               href={"/main"}

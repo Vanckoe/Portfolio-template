@@ -1,6 +1,6 @@
 import React from "react";
 // import Link from "next/link";
-import Logo from "@/assets/Logo";
+import VanckoeLogo from "@/assets/VanckoeLogo";
 // import { useTranslations } from "next-intl";
 import LanguageSwitcher from "./language-switcher";
 const Footer = () => {
@@ -10,7 +10,7 @@ const Footer = () => {
     <div className="w-full bg-[#080c11] bg-opacity-80 pt-5 pb-10">
       <footer className="container px-5 justify-between  text-white mx-auto w-full flex flex-col md:flex-row items-center">
         <div className="flex flex-row items-center md:items-start justify-between md:justify-start w-full md:w-fit md:flex-col gap-2.5 ">
-          <Logo />
+          <VanckoeLogo width="10.5rem" height="2.52rem" />
           <div className=" md:hidden">
             <LanguageSwitcher textColorFirstStage={"text-white"} />
           </div>
