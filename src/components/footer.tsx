@@ -1,38 +1,19 @@
-import React from "react";
-// import Link from "next/link";
+import Link from "next/link";
 import VanckoeLogo from "@/assets/VanckoeLogo";
-// import { useTranslations } from "next-intl";
-import LanguageSwitcher from "./language-switcher";
-const Footer = () => {
-  // const t = useTranslations("Navigation");
+import { shellClass } from "@/app/main/_components/portfolio-primitives";
 
+export default function Footer() {
   return (
-    <div className="w-full bg-[#080c11] bg-opacity-80 pt-5 pb-10">
-      <footer className="container px-5 justify-between  text-white mx-auto w-full flex flex-col md:flex-row items-center">
-        <div className="flex flex-row items-center md:items-start justify-between md:justify-start w-full md:w-fit md:flex-col gap-2.5 ">
-          <VanckoeLogo width="10.5rem" height="2.52rem" />
-          <div className=" md:hidden">
-            <LanguageSwitcher textColorFirstStage={"text-white"} />
-          </div>
+    <footer className="border-t border-line bg-[#05080c]">
+      <div className={`${shellClass} grid min-h-36 grid-cols-[1fr_auto] items-center gap-8 py-8 md:grid-cols-[1fr_auto_1fr] md:py-0`}>
+        <VanckoeLogo width="9.5rem" height="2.28rem" />
+        <p className="hidden text-[0.72rem] text-[#687b86] md:block">Frontend development · Almaty · UTC+5</p>
+        <div className="flex flex-col items-end gap-1.5 text-[0.72rem] text-portfolio-muted md:justify-self-end md:flex-row md:gap-5">
+          <Link className="transition-colors hover:text-accent-soft" href="https://github.com/Vanckoe" target="_blank" rel="noreferrer">GitHub</Link>
+          <Link className="transition-colors hover:text-accent-soft" href="https://www.instagram.com/born_in_the_steppe/" target="_blank" rel="noreferrer">Instagram</Link>
+          <Link className="transition-colors hover:text-accent-soft" href="/main#top">↑ Top</Link>
         </div>
-        <div className="flex flex-col-reverse md:flex-col items-end">
-          <div className="flex flex-col-reverse w-full md:w-fit md:flex-row items-center gap-8 md:gap-12 justify-end">
-            {/* <div className="hidden md:flex flex-col md:flex-row items-center gap-5 md:gap-10">
-              <Link href={"/main"} className="text-sm font-semibold">
-                {t("main")}
-              </Link>
-              <Link href={"/about"} className="text-sm font-semibold">
-                {t("about")}
-              </Link>
-            </div> */}
-            <div className="hidden md:block">
-              <LanguageSwitcher textColorFirstStage={"text-white"} />
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
   );
-};
-
-export default Footer;
+}

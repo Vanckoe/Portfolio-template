@@ -77,5 +77,128 @@
     "title": "С фокусом на глобальность",
     "subtitleTop": "География не ограничивает качество. Я работаю с клиентами по всему миру",
     "subtitleBottom": "и делаю сайты, которые конвертируют, впечатляют и работают без сбоев."
+  },
+  "Portfolio": {
+    "navigation": {
+      "homeLabel": "В начало страницы",
+      "navigationLabel": "Основная навигация",
+      "work": "Работы",
+      "capabilities": "Возможности",
+      "geography": "География",
+      "contact": "Контакты"
+    },
+    "hero": {
+      "availability": "Доступен для новых проектов",
+      "name": "Адиль Таласбек",
+      "role": "Frontend-разработчик",
+      "summary": "Проектирую и разрабатываю интерфейсы на React и Next.js — от промо-сайтов с точной анимацией до многоязычных продуктовых платформ.",
+      "viewWork": "Смотреть работы",
+      "projects": "завершённых проектов",
+      "years": "года коммерческого опыта",
+      "countries": "стран в географии клиентов",
+      "factsLabel": "Опыт в цифрах",
+      "labTitle": "Интерактивная сцена",
+      "labDescription": "Трёхмерный объект реагирует на движение указателя.",
+      "downloadCv": "Скачать CV",
+      "scroll": "Листайте",
+      "introductionLabel": "Кратко о специализации",
+      "contactsLabel": "Контакты"
+    },
+    "work": {
+      "eyebrow": "Выбранные работы",
+      "title": "Завершённые проекты",
+      "description": "Реальные запущенные сайты: продуктовые платформы, корпоративные проекты и промо-страницы.",
+      "filterLabel": "Фильтр проектов",
+      "openProject": "открыть проект",
+      "filters": {
+        "all": "Все",
+        "platform": "Платформы",
+        "corporate": "Корпоративные",
+        "landing": "Лендинги"
+      }
+    },
+    "tools": {
+      "title": "Орбита инструментов",
+      "pause": "Пауза",
+      "resume": "Продолжить"
+    },
+    "capabilities": {
+      "eyebrow": "Технический индекс",
+      "title": "Что реализовано в проектах",
+      "description": "Не перечень инструментов, а задачи, которые уже работают в production.",
+      "technologyLabel": "Используемые технологии",
+      "preview": {
+        "label": "Интерактивный пример",
+        "viewportLabel": "Размер интерфейса",
+        "languageLabel": "Язык примера",
+        "desktop": "Desktop",
+        "mobile": "Mobile",
+        "copy": {
+          "ru": {
+            "navWork": "Работы",
+            "navContact": "Контакты",
+            "eyebrow": "Интерфейсы для людей",
+            "title": "Ясно на любом экране",
+            "description": "Адаптивная композиция, локализация и спокойная анимация работают как единая система.",
+            "action": "Открыть проект"
+          },
+          "en": {
+            "navWork": "Work",
+            "navContact": "Contact",
+            "eyebrow": "Interfaces for people",
+            "title": "Clear on every screen",
+            "description": "Responsive composition, localization and calm motion work as one coherent system.",
+            "action": "Open project"
+          }
+        }
+      },
+      "items": {
+        "interfaces": {
+          "title": "Интерфейсы",
+          "description": "Адаптивные системы от мобильного экрана до широкого desktop без потери иерархии.",
+          "facts": ["Pixel-perfect вёрстка", "WCAG-ориентированные паттерны", "Компонентная архитектура"]
+        },
+        "motion": {
+          "title": "Motion и 3D",
+          "description": "Анимация помогает понять интерфейс и почувствовать отклик, а не отвлекает от контента.",
+          "facts": ["Framer Motion", "Three.js / React Three Fiber", "Reduced motion режим"]
+        },
+        "localization": {
+          "title": "Локализация",
+          "description": "Маршруты, контент и UI-состояния для продуктов, работающих на нескольких рынках.",
+          "facts": ["next-intl", "Locale routing", "Кириллица и латиница"]
+        },
+        "integrations": {
+          "title": "Интеграции",
+          "description": "Формы и продуктовые сценарии связаны с реальными сервисами и аналитикой.",
+          "facts": ["Telegram и Email API", "PostHog / Sentry", "CMS и backend API"]
+        }
+      }
+    },
+    "geography": {
+      "eyebrow": "География проектов",
+      "title": "Проекты по всему миру",
+      "description": "Клиенты и команды в 10 странах — все маршруты начинаются в Астане.",
+      "countryListLabel": "Страны",
+      "countries": {
+        "kazakhstan": "Казахстан",
+        "usa": "США",
+        "ukraine": "Украина",
+        "russia": "Россия",
+        "india": "Индия",
+        "china": "Китай",
+        "azerbaijan": "Азербайджан",
+        "iraq": "Ирак",
+        "israel": "Израиль",
+        "uk": "Великобритания"
+      }
+    },
+    "contact": {
+      "eyebrow": "Контакты",
+      "title": "Обсудить задачу",
+      "description": "Напишите с кратким описанием проекта, сроками и ссылкой на дизайн, если он уже есть.",
+      "cv": "Скачать резюме",
+      "socialsLabel": "Социальные сети"
+    }
   }
 }

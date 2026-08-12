@@ -17,7 +17,7 @@
     "generaltitle": "What I’ve Built",
     "moveToTheSite": "Go ahead",
     "redesign": "Redesign 🇺🇦 @v_maslyanik",
-    "design": "Designed by: ",
+    "design": "Designed by",
     "stack": "Stack",
     "previewError": "Preview not available",
     "project1": {
@@ -77,5 +77,128 @@
     "title": "With a focus on globality",
     "subtitleTop": "Geography does not limit the quality. I work with clients all over the world",
     "subtitleBottom": "and make websites that convert, impress, and run smoothly."
+  },
+  "Portfolio": {
+    "navigation": {
+      "homeLabel": "Back to the top",
+      "navigationLabel": "Primary navigation",
+      "work": "Work",
+      "capabilities": "Capabilities",
+      "geography": "Geography",
+      "contact": "Contact"
+    },
+    "hero": {
+      "availability": "Available for new projects",
+      "name": "Adil Talasbek",
+      "role": "Frontend developer",
+      "summary": "I design and build React and Next.js interfaces — from motion-led campaign sites to multilingual product platforms.",
+      "viewWork": "View work",
+      "projects": "completed projects",
+      "years": "years of commercial experience",
+      "countries": "countries across client geography",
+      "factsLabel": "Experience in numbers",
+      "labTitle": "Interactive scene",
+      "labDescription": "The three-dimensional object responds to pointer movement.",
+      "downloadCv": "Download CV",
+      "scroll": "Scroll",
+      "introductionLabel": "Specialization summary",
+      "contactsLabel": "Contacts"
+    },
+    "work": {
+      "eyebrow": "Selected work",
+      "title": "Shipped projects",
+      "description": "Real production websites: product platforms, corporate projects and focused campaign pages.",
+      "filterLabel": "Filter projects",
+      "openProject": "open project",
+      "filters": {
+        "all": "All",
+        "platform": "Platforms",
+        "corporate": "Corporate",
+        "landing": "Landing pages"
+      }
+    },
+    "tools": {
+      "title": "Tool orbit",
+      "pause": "Pause",
+      "resume": "Resume"
+    },
+    "capabilities": {
+      "eyebrow": "Technical index",
+      "title": "What is running in production",
+      "description": "Not a list of tools, but problems already solved in shipped work.",
+      "technologyLabel": "Technologies in use",
+      "preview": {
+        "label": "Interactive preview",
+        "viewportLabel": "Interface size",
+        "languageLabel": "Preview language",
+        "desktop": "Desktop",
+        "mobile": "Mobile",
+        "copy": {
+          "ru": {
+            "navWork": "Работы",
+            "navContact": "Контакты",
+            "eyebrow": "Интерфейсы для людей",
+            "title": "Ясно на любом экране",
+            "description": "Адаптивная композиция, локализация и спокойная анимация работают как единая система.",
+            "action": "Открыть проект"
+          },
+          "en": {
+            "navWork": "Work",
+            "navContact": "Contact",
+            "eyebrow": "Interfaces for people",
+            "title": "Clear on every screen",
+            "description": "Responsive composition, localization and calm motion work as one coherent system.",
+            "action": "Open project"
+          }
+        }
+      },
+      "items": {
+        "interfaces": {
+          "title": "Interfaces",
+          "description": "Responsive systems from compact mobile screens to wide desktop layouts without losing hierarchy.",
+          "facts": ["Pixel-perfect implementation", "WCAG-aware patterns", "Component architecture"]
+        },
+        "motion": {
+          "title": "Motion and 3D",
+          "description": "Animation explains state and adds tactile feedback without competing with the content.",
+          "facts": ["Framer Motion", "Three.js / React Three Fiber", "Reduced motion mode"]
+        },
+        "localization": {
+          "title": "Localization",
+          "description": "Routes, content and UI states for products operating across multiple markets.",
+          "facts": ["next-intl", "Locale routing", "Cyrillic and Latin scripts"]
+        },
+        "integrations": {
+          "title": "Integrations",
+          "description": "Forms and product flows connected to real services, observability and analytics.",
+          "facts": ["Telegram and Email API", "PostHog / Sentry", "CMS and backend API"]
+        }
+      }
+    },
+    "geography": {
+      "eyebrow": "Project geography",
+      "title": "Projects around the world",
+      "description": "Clients and teams across 10 countries — every route starts in Astana.",
+      "countryListLabel": "Countries",
+      "countries": {
+        "kazakhstan": "Kazakhstan",
+        "usa": "United States",
+        "ukraine": "Ukraine",
+        "russia": "Russia",
+        "india": "India",
+        "china": "China",
+        "azerbaijan": "Azerbaijan",
+        "iraq": "Iraq",
+        "israel": "Israel",
+        "uk": "United Kingdom"
+      }
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Discuss a project",
+      "description": "Send a short brief, expected timeline and a design link if one is already available.",
+      "cv": "Download résumé",
+      "socialsLabel": "Social media"
+    }
   }
 }

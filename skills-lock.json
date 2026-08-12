@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "frontend-ui-engineering": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-ui-engineering/SKILL.md",
+      "computedHash": "cb4e981ecb5f701b451fc4e937a38049b49fd4523f213e06cffbd00b007060dc"
+    }
+  }
+}

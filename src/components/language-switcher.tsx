@@ -33,13 +33,11 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = (
   };
 
   return (
-    <div className="flex flex-row items-center gap-3">
+    <div className="flex items-center justify-self-end gap-2 text-[0.72rem] font-bold tracking-[0.08em] text-[#536572]" aria-label="Language">
       <button
-        className={`transition-colors flex flex-row items-center gap-2 duration-200 ${
-          currentLocale === "cn"
-            ? "text-white  font-bold"
-            : "text-gray-400 hover:text-white hover:font-extrabold"
-        }`}
+        type="button"
+        aria-pressed={currentLocale === "cn"}
+        className={`border-0 bg-transparent transition-colors hover:text-portfolio-text ${currentLocale === "cn" ? "text-portfolio-text" : ""}`}
         onClick={() => handleLanguageChange("cn")}
       >
         {/* <Image
@@ -50,13 +48,11 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = (
         /> */}
         EN
       </button>
-      <span className="text-gray-400">----</span>
+      <span aria-hidden="true">/</span>
       <button
-        className={`transition-colors flex flex-row items-center gap-2 duration-200 ${
-          currentLocale === "ru"
-            ? "text-white font-bold"
-            : "text-gray-400 hover:text-white hover:font-extrabold"
-        }`}
+        type="button"
+        aria-pressed={currentLocale === "ru"}
+        className={`border-0 bg-transparent transition-colors hover:text-portfolio-text ${currentLocale === "ru" ? "text-portfolio-text" : ""}`}
         onClick={() => handleLanguageChange("ru")}
       >
         {/* <Image

@@ -2,235 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --background: 210 39% 5%;
+  --foreground: 196 36% 95%;
+  --border: 208 28% 19%;
+  --radius: 0.5rem;
+}
+
 html {
-  font-size: 1vw;
-}
-* {
-  padding: 0rem;
-  margin: 0rem;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+  scroll-behavior: smooth;
+  /* 1rem = 16px at a 440px mobile viewport. */
+  font-size: 3.636364vw;
+  background: #070b10;
 }
 
-/* Links */
-
-a,
-a:link,
-a:visited {
-  text-decoration: none;
+@media (min-width: 762px) {
+  html {
+    /* 1rem = 16px at a 1440px viewport. */
+    font-size: 1.111111vw;
+  }
 }
 
-a:hover {
-  text-decoration: none;
-}
-
-/* Common */
-
-aside,
-nav,
-footer,
-header,
-section,
-main {
-  display: block;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-ul,
-ul li {
-  list-style: none;
-}
-
-img {
-  vertical-align: top;
+body {
+  min-width: 20rem;
+  min-height: 100vh;
 }
 
 img,
-svg {
-  max-width: 100%;
-  height: auto;
-}
-
-address {
-  font-style: normal;
-}
-
-/* Form */
-
-input,
-textarea,
-button,
-select {
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
-  background-color: transparent;
-}
-
-input::-ms-clear {
-  display: none;
-}
-
-button,
-input[type="submit"] {
-  display: inline-block;
-  box-shadow: none;
-  background-color: transparent;
-  background: none;
-  cursor: pointer;
-}
-
-input:focus,
-input:active,
-button:focus,
-button:active {
-  outline: none;
-}
-
-button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
-}
-
-label {
-  cursor: pointer;
-}
-
-h1 {
-  font-size: 3rem;        /* 48px -> 3rem */
-  font-weight: 600;
-  line-height: 4.4rem;    /* 70.4px -> 4.4rem */
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
-
-/* Для телефонов (максимальная ширина 767px) */
-@media (max-width: 767px) {
-  html {
-    font-size: 3.334vw;
-  }
-  h1 {
-    font-family: Manrope;
-    font-size: 2rem;      /* 32px -> 2rem */
-    font-weight: 600;
-    line-height: 3.25rem; /* 52px -> 3.25rem */
-    letter-spacing: -0.03em;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-  }
-  .container {
-    padding-left: 1.875rem;  /* 30px -> 1.875rem */
-    width: 100%;
-    padding-right: 1.875rem; /* 30px -> 1.875rem */
-  }
-}
-@media (min-width: 767px) {
-  .container {
-    width: 80rem; 
-  }
-}
-
-legend {
+svg,
+canvas {
   display: block;
+  max-width: 100%;
 }
 
-.bg-noise {
-  position: relative;
+:focus-visible {
+  outline: 0.125rem solid #8bdcff;
+  outline-offset: 0.25rem;
 }
 
-.bg-noise::before {
-  content: "";
-  background-image: url("/tool/nooice.png");
-  background-repeat: repeat;
-  background-size: auto;
-  opacity: 0.03;
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* ---break---  */
-
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
-    --radius: 0.5rem;  /* Оставляем как есть, так как уже в rem */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
-  .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-  }
-}
 
-/* ---break---  */
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }

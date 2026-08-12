@@ -10,6 +10,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        md: "762px",
+      },
       animation: {
         marquee: "marquee 10s linear infinite",
       },
@@ -24,6 +27,15 @@ export default {
         },
       },
       colors: {
+        ink: "#070b10",
+        surface: "#0c1219",
+        "surface-raised": "#111923",
+        line: "#22303d",
+        "line-strong": "#344756",
+        "portfolio-text": "#eef6f9",
+        "portfolio-muted": "#94a6b2",
+        "portfolio-accent": "#8bdcff",
+        "accent-soft": "#ccefff",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
