@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { sectionClass, sectionIndexClass, sectionTitleClass } from "./portfolio-primitives";
+import ContactSocialLinks from "./contact-social-links";
 
 export default async function ContactSection() {
   const t = await getTranslations("Portfolio.contact");
@@ -18,9 +19,9 @@ export default async function ContactSection() {
           adiltalasbek@gmail.com
         </Link>
         <div className="mt-10 flex flex-wrap gap-x-8 gap-y-4 text-[0.82rem] text-portfolio-muted">
-          <Link className="border-b border-line-strong pb-1 transition-colors hover:text-portfolio-text" href="https://t.me/Vanckoe" target="_blank" rel="noreferrer">Telegram ↗</Link>
           <a className="border-b border-line-strong pb-1 transition-colors hover:text-portfolio-text" href="/Adil.pdf" download>{t("cv")} ↓</a>
         </div>
+        <ContactSocialLinks label={t("socialsLabel")} />
       </div>
     </section>
   );

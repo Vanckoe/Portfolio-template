@@ -192,7 +192,8 @@
       "eyebrow": "Contact",
       "title": "Discuss a project",
       "description": "Send a short brief, expected timeline and a design link if one is already available.",
-      "cv": "Download résumé"
+      "cv": "Download résumé",
+      "socialsLabel": "Social media"
     }
   }
 }

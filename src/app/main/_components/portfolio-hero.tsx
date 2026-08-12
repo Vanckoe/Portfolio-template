@@ -33,7 +33,7 @@ export default function PortfolioHero() {
           <span className="ml-auto text-[#5f727e]">Almaty · UTC+5</span>
         </div>
 
-        <h1 id="hero-title" className="mt-6 text-[3.35rem] font-medium leading-[0.92] tracking-[-0.075em] md:mt-8 md:text-[clamp(3.75rem,6.2vw,6.5rem)] md:leading-[0.86]">
+        <h1 id="hero-title" className="mt-6 text-[3.35rem] font-medium leading-[0.92] tracking-[-0.075em] md:mt-8 md:text-[clamp(3.5rem,5.7vw,6rem)] md:leading-[0.86]">
           {t("name")}
           <span className="block font-light text-portfolio-accent">{t("role")}</span>
         </h1>

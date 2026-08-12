@@ -113,7 +113,7 @@ export default function ProjectGeography() {
                 onMouseEnter={() => setActiveId(location.id)}
                 onFocus={() => setActiveId(location.id)}
                 onClick={() => setActiveId(location.id)}
-                className={`grid w-full grid-cols-[1.5rem_1fr_auto] items-center gap-3 border-0 border-t border-line bg-transparent py-3 text-left text-[#7e909b] transition hover:text-portfolio-text aria-pressed:pl-1 aria-pressed:text-portfolio-text md:grid-cols-[2rem_1fr_auto] ${index % 2 ? "border-l pl-3 md:border-l-0 md:pl-0" : ""} ${index === locations.length - 1 ? "border-b" : ""}`}
+                className={`grid w-full grid-cols-[1.5rem_1fr_auto] items-center gap-3 border-0 border-t border-line bg-transparent py-3 text-left text-[#7e909b] transition-colors hover:text-portfolio-text aria-pressed:text-portfolio-text md:grid-cols-[2rem_1fr_auto] ${index % 2 ? "border-l pl-3 md:border-l-0 md:pl-0" : ""} ${index === locations.length - 1 ? "border-b" : ""}`}
               >
                 <span className="font-mono text-[0.62rem] text-[#536671]">{String(index + 1).padStart(2, "0")}</span>
                 <strong className="text-[0.8rem] font-medium">{t(`countries.${location.key}`)}</strong>
