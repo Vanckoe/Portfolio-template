@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useMemo, useState } from "react";
 import { projects, type ProjectCategory } from "./project-data";
@@ -23,7 +22,7 @@ export default function WorkShowcase() {
     <section id="work" className={sectionClass} aria-labelledby="work-title">
       <SectionHeading index="01" eyebrow={t("eyebrow")} title={t("title")} description={t("description")} titleId="work-title" />
 
-      <div className="-mr-4 mb-8 flex flex-nowrap gap-2 overflow-x-auto pr-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:mr-0 md:flex-wrap md:pr-0" aria-label={t("filterLabel")}>
+      <div className="-mr-4 mb-14 flex flex-nowrap gap-7 overflow-x-auto pr-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:mr-0 md:mb-20 md:flex-wrap md:gap-10 md:pr-0" aria-label={t("filterLabel")}>
         {filters.map((item) => {
           const selected = filter === item;
           return (
@@ -32,16 +31,15 @@ export default function WorkShowcase() {
               type="button"
               aria-pressed={selected}
               onClick={() => setFilter(item)}
-              className={`inline-flex flex-none items-center gap-2.5 border px-3.5 py-2.5 text-[0.78rem] transition ${selected ? "border-[#527186] bg-surface text-portfolio-text" : "border-line bg-transparent text-portfolio-muted hover:border-[#527186] hover:text-portfolio-text"}`}
+              className={`flex-none border-b pb-2 text-[0.78rem] transition-colors ${selected ? "border-portfolio-accent text-portfolio-text" : "border-transparent text-portfolio-muted hover:text-portfolio-text"}`}
             >
               {t(`filters.${item}`)}
-              <span className="font-mono text-[0.62rem] text-[#60727e]">{item === "all" ? projects.length : projects.filter((p) => p.category === item).length}</span>
             </button>
           );
         })}
       </div>
 
-      <motion.div layout={!reduceMotion} className="flex flex-col gap-12 md:grid md:grid-cols-12 md:gap-x-5 md:gap-y-16">
+      <motion.div layout={!reduceMotion} className="flex flex-col gap-20 md:grid md:grid-cols-12 md:gap-x-8 md:gap-y-28">
         <AnimatePresence mode="popLayout" initial={false}>
           {visibleProjects.map((project, index) => {
             const featured = index === 0;
@@ -59,30 +57,29 @@ export default function WorkShowcase() {
                   href={project.href}
                   target="_blank"
                   rel="noreferrer"
-                  className={`group relative block overflow-hidden border border-line bg-surface ${featured ? "aspect-[4/3] md:aspect-[16/7]" : "aspect-[4/3] md:aspect-[16/10]"}`}
+                  className={`group relative block overflow-hidden bg-surface ${featured ? "aspect-[4/3] md:aspect-[16/7]" : "aspect-[4/3] md:aspect-[16/10]"}`}
                   aria-label={`${projectT(`${project.translationKey}.title`)} — ${t("openProject")}`}
                 >
-                  <Image src={project.image} alt="" fill sizes={featured ? "(min-width: 762px) 80rem, 100vw" : "(min-width: 762px) 40rem, 100vw"} className="object-cover object-top saturate-[0.86] contrast-[0.97] transition duration-700 ease-out group-hover:scale-[1.025] group-hover:saturate-100 group-focus-visible:scale-[1.025]" />
-                  <span className="absolute right-4 top-4 z-[2] grid size-11 place-items-center rounded-full border border-white/30 bg-[#e1f7ff]/90 text-ink backdrop-blur-xl transition group-hover:rotate-[8deg] group-hover:scale-105" aria-hidden="true"><ArrowUpRight size="1.2rem" /></span>
-                  <span className="absolute bottom-3 left-3 z-[2] bg-ink/75 px-2 py-1.5 font-mono text-[0.65rem] text-white backdrop-blur-lg">{String(index + 1).padStart(2, "0")}</span>
+                  <Image src={project.image} alt="" fill sizes={featured ? "(min-width: 762px) 80rem, 100vw" : "(min-width: 762px) 40rem, 100vw"} className="object-cover object-top saturate-[0.9] transition duration-700 ease-out group-hover:scale-[1.018] group-hover:saturate-100 group-focus-visible:scale-[1.018]" />
                 </Link>
 
-                <div className="pt-5">
-                  <div className="flex flex-col items-start justify-between gap-3 md:flex-row md:gap-6">
-                    <div>
-                      <p className="text-[0.72rem] text-[#718591]">{t(`filters.${project.category}`)}</p>
-                      <h3 className="mt-1 text-[1.75rem] font-medium tracking-[-0.045em]">{projectT(`${project.translationKey}.title`)}</h3>
+                <div className="min-w-0 pt-6">
+                  <div className="flex items-baseline justify-between gap-6">
+                    <div className="min-w-0">
+                      <p className="text-[0.7rem] text-portfolio-muted">{t(`filters.${project.category}`)}</p>
+                      <h3 className="mt-1 truncate text-[1.75rem] font-medium tracking-[-0.045em] md:text-[2rem]">{projectT(`${project.translationKey}.title`)}</h3>
                     </div>
-                    <div className="flex max-w-none flex-wrap justify-start gap-1.5 md:max-w-[50%] md:justify-end" aria-label={projectT("stack")}>
-                      {project.stack.map((item) => <span className="border border-line px-2 py-1.5 text-[0.65rem] text-[#8ea0aa]" key={item}>{item}</span>)}
-                    </div>
+                    <span className="hidden shrink-0 font-mono text-[0.65rem] text-[#657883] md:block" aria-hidden="true">↗</span>
                   </div>
-                  <p className={`mt-4 max-w-[52rem] overflow-hidden text-[0.88rem] leading-[1.65] text-[#a6b5bd] [display:-webkit-box] [-webkit-box-orient:vertical] ${featured ? "[-webkit-line-clamp:4] md:overflow-visible md:[display:block]" : "[-webkit-line-clamp:4] md:[-webkit-line-clamp:3]"}`}>{projectT(`${project.translationKey}.description`)}</p>
-                  {project.designer && (
-                    <p className="mt-3 text-[0.72rem] text-[#718591]">
-                      {projectT("design")}: {project.designer.href ? <Link className="text-[#b8c9d1] underline underline-offset-[0.2rem]" href={project.designer.href} target="_blank" rel="noreferrer">{project.designer.label}</Link> : project.designer.label}
-                    </p>
-                  )}
+                  <p className="mt-4 truncate text-[0.86rem] leading-[1.65] text-[#a6b5bd]">{projectT(`${project.translationKey}.description`)}</p>
+                  <div className="mt-4 flex min-w-0 flex-col gap-2 text-[0.68rem] text-[#718591] md:flex-row md:items-center md:gap-5">
+                    <p className="truncate" aria-label={projectT("stack")}>{project.stack.slice(0, 3).join(" · ")}</p>
+                    {project.designer && (
+                      <p className="truncate md:border-l md:border-line md:pl-5">
+                        {projectT("design")}: {project.designer.href ? <Link className="text-[#aebdc5] underline decoration-line-strong underline-offset-4 transition-colors hover:text-portfolio-text" href={project.designer.href} target="_blank" rel="noreferrer">{project.designer.label}</Link> : project.designer.label}
+                      </p>
+                    )}
+                  </div>
                 </div>
               </motion.article>
             );

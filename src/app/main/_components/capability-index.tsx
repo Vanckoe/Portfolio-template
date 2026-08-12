@@ -1,52 +1,83 @@
 "use client";
 
-import type { CSSProperties, PointerEvent } from "react";
-import { Gauge, Languages, MonitorSmartphone, PlugZap } from "lucide-react";
+import { motion, useReducedMotion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { useState } from "react";
 import { SectionHeading, sectionClass } from "./portfolio-primitives";
 
 const capabilityKeys = ["interfaces", "motion", "localization", "integrations"] as const;
-const icons = [MonitorSmartphone, Gauge, Languages, PlugZap];
-
-function handlePointerMove(event: PointerEvent<HTMLElement>) {
-  const rect = event.currentTarget.getBoundingClientRect();
-  event.currentTarget.style.setProperty("--pointer-x", `${event.clientX - rect.left}px`);
-  event.currentTarget.style.setProperty("--pointer-y", `${event.clientY - rect.top}px`);
-}
+type PreviewViewport = "desktop" | "mobile";
+type PreviewLocale = "ru" | "en";
 
 export default function CapabilityIndex() {
   const t = useTranslations("Portfolio.capabilities");
+  const reduceMotion = useReducedMotion();
+  const [viewport, setViewport] = useState<PreviewViewport>("desktop");
+  const [previewLocale, setPreviewLocale] = useState<PreviewLocale>("ru");
 
   return (
     <section id="capabilities" className={sectionClass} aria-labelledby="capabilities-title">
       <SectionHeading index="02" eyebrow={t("eyebrow")} title={t("title")} description={t("description")} titleId="capabilities-title" />
 
-      <div className="grid grid-cols-1 border-l border-t border-line md:grid-cols-4">
-        {capabilityKeys.map((key, index) => {
-          const Icon = icons[index];
-          return (
-            <article
-              key={key}
-              className="relative min-h-[21rem] overflow-hidden border-b border-r border-line bg-surface p-6 before:pointer-events-none before:absolute before:inset-0 before:bg-[radial-gradient(20rem_circle_at_var(--pointer-x)_var(--pointer-y),rgba(139,220,255,0.13),transparent_45%)] md:min-h-[25rem]"
-              onPointerMove={handlePointerMove}
-              style={{ "--pointer-x": "50%", "--pointer-y": "50%" } as CSSProperties}
-            >
-              <div className="relative flex justify-between text-portfolio-accent">
-                <Icon size="1.25rem" strokeWidth={1.5} aria-hidden="true" />
-                <span className="font-mono text-[0.7rem] text-[#526570]">0{index + 1}</span>
+      <div className="grid grid-cols-1 gap-12 md:grid-cols-[minmax(0,1fr)_17rem] md:items-stretch md:gap-16">
+        <div className="overflow-hidden border border-line bg-surface">
+          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-line px-4 py-3 md:px-6">
+            <p className="font-mono text-[0.64rem] uppercase tracking-[0.12em] text-portfolio-muted">{t("preview.label")}</p>
+            <div className="flex items-center gap-5 text-[0.7rem]">
+              <div className="flex gap-3" aria-label={t("preview.viewportLabel")}>
+                {(["desktop", "mobile"] as PreviewViewport[]).map((item) => (
+                  <button key={item} type="button" aria-pressed={viewport === item} onClick={() => setViewport(item)} className="text-portfolio-muted transition-colors hover:text-portfolio-text aria-pressed:text-portfolio-accent">{t(`preview.${item}`)}</button>
+                ))}
               </div>
-              <h3 className="relative mt-12 text-[1.45rem] font-medium tracking-[-0.035em] md:mt-20">{t(`items.${key}.title`)}</h3>
-              <p className="relative mt-3 text-[0.82rem] leading-[1.55] text-portfolio-muted">{t(`items.${key}.description`)}</p>
-              <ul className="relative mt-8">
-                {(t.raw(`items.${key}.facts`) as string[]).map((fact) => <li className="border-t border-line py-2.5 text-[0.72rem] text-[#bcc9cf]" key={fact}>{fact}</li>)}
-              </ul>
-            </article>
-          );
-        })}
-      </div>
+              <span className="h-3 w-px bg-line" aria-hidden="true" />
+              <div className="flex gap-3" aria-label={t("preview.languageLabel")}>
+                {(["ru", "en"] as PreviewLocale[]).map((item) => (
+                  <button key={item} type="button" aria-pressed={previewLocale === item} onClick={() => setPreviewLocale(item)} className="uppercase text-portfolio-muted transition-colors hover:text-portfolio-text aria-pressed:text-portfolio-accent">{item}</button>
+                ))}
+              </div>
+            </div>
+          </div>
 
-      <div className="flex justify-start gap-8 overflow-x-auto whitespace-nowrap border-b border-line py-5 font-mono text-[0.68rem] text-[#6e818c] md:justify-between" aria-label={t("technologyLabel")}>
-        <span>React</span><span>Next.js</span><span>TypeScript</span><span>Astro</span><span>Three.js</span><span>Motion</span><span>Tailwind</span><span>PostHog</span>
+          <div className="grid min-h-[31rem] place-items-center overflow-hidden bg-[radial-gradient(circle_at_50%_35%,rgba(62,155,199,0.14),transparent_24rem)] p-5 md:min-h-[38rem] md:p-10">
+            <motion.div
+              layout={!reduceMotion}
+              transition={{ type: "spring", stiffness: 140, damping: 24 }}
+              className={`relative w-full overflow-hidden border border-line-strong bg-ink shadow-[0_1.5rem_5rem_rgba(0,0,0,0.24)] ${viewport === "mobile" ? "max-w-[20rem]" : "max-w-[48rem]"}`}
+            >
+              <div className="flex h-11 items-center justify-between border-b border-line px-4">
+                <span className="size-1.5 rounded-full bg-portfolio-accent" aria-hidden="true" />
+                <div className="flex gap-4 font-mono text-[0.55rem] uppercase tracking-[0.1em] text-portfolio-muted">
+                  <span>{t(`preview.copy.${previewLocale}.navWork`)}</span>
+                  <span>{t(`preview.copy.${previewLocale}.navContact`)}</span>
+                </div>
+              </div>
+              <div className={`relative min-h-[24rem] p-6 md:p-10 ${viewport === "mobile" ? "flex flex-col justify-end" : "grid grid-cols-[1fr_0.8fr] items-end gap-8"}`}>
+                <motion.div
+                  className={`absolute rounded-full border border-portfolio-accent/35 bg-portfolio-accent/5 ${viewport === "mobile" ? "right-[-3rem] top-10 size-48" : "right-[8%] top-[18%] size-56"}`}
+                  animate={reduceMotion ? undefined : { y: [0, -8, 0], rotate: [0, 4, 0] }}
+                  transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+                  aria-hidden="true"
+                >
+                  <span className="absolute inset-[22%] rounded-full border border-portfolio-accent/20" />
+                </motion.div>
+                <div className="relative z-[2]">
+                  <p className="font-mono text-[0.58rem] uppercase tracking-[0.12em] text-portfolio-accent">{t(`preview.copy.${previewLocale}.eyebrow`)}</p>
+                  <h3 className="mt-4 text-[2rem] font-light leading-[1.02] tracking-[-0.055em] md:text-[2.75rem]">{t(`preview.copy.${previewLocale}.title`)}</h3>
+                  <p className="mt-5 max-w-[24rem] text-[0.72rem] leading-[1.65] text-portfolio-muted">{t(`preview.copy.${previewLocale}.description`)}</p>
+                </div>
+                <div className="relative z-[2] mt-8 flex items-end justify-between md:mt-0 md:justify-end">
+                  <span className="border-b border-portfolio-accent pb-1 text-[0.68rem] text-portfolio-text">{t(`preview.copy.${previewLocale}.action`)}</span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+
+        <ul className="flex flex-col justify-between border-t border-line">
+          {capabilityKeys.map((key) => (
+            <li className="flex min-h-20 items-center border-b border-line py-5 text-[1rem] tracking-[-0.02em] text-[#c4d1d7] md:min-h-28" key={key}>{t(`items.${key}.title`)}</li>
+          ))}
+        </ul>
       </div>
     </section>
   );

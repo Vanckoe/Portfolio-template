@@ -99,7 +99,9 @@
       "factsLabel": "Опыт в цифрах",
       "labTitle": "Интерактивная сцена",
       "labDescription": "Трёхмерный объект реагирует на движение указателя.",
-      "downloadCv": "Скачать CV"
+      "downloadCv": "Скачать CV",
+      "scroll": "Листайте",
+      "introductionLabel": "Кратко о специализации"
     },
     "work": {
       "eyebrow": "Выбранные работы",
@@ -119,6 +121,31 @@
       "title": "Что реализовано в проектах",
       "description": "Не перечень инструментов, а задачи, которые уже работают в production.",
       "technologyLabel": "Используемые технологии",
+      "preview": {
+        "label": "Интерактивный пример",
+        "viewportLabel": "Размер интерфейса",
+        "languageLabel": "Язык примера",
+        "desktop": "Desktop",
+        "mobile": "Mobile",
+        "copy": {
+          "ru": {
+            "navWork": "Работы",
+            "navContact": "Контакты",
+            "eyebrow": "Интерфейсы для людей",
+            "title": "Ясно на любом экране",
+            "description": "Адаптивная композиция, локализация и спокойная анимация работают как единая система.",
+            "action": "Открыть проект"
+          },
+          "en": {
+            "navWork": "Work",
+            "navContact": "Contact",
+            "eyebrow": "Interfaces for people",
+            "title": "Clear on every screen",
+            "description": "Responsive composition, localization and calm motion work as one coherent system.",
+            "action": "Open project"
+          }
+        }
+      },
       "items": {
         "interfaces": {
           "title": "Интерфейсы",
@@ -144,8 +171,8 @@
     },
     "geography": {
       "eyebrow": "География проектов",
-      "title": "Работа без границ часового пояса",
-      "description": "Карта показывает страны клиентов и команд, с которыми уже выстроена удалённая работа.",
+      "title": "Проекты по всему миру",
+      "description": "Клиенты и команды в 10 странах — все маршруты начинаются в Астане.",
       "countryListLabel": "Страны",
       "countries": {
         "kazakhstan": "Казахстан",
