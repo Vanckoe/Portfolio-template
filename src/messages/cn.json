@@ -101,7 +101,8 @@
       "labDescription": "The three-dimensional object responds to pointer movement.",
       "downloadCv": "Download CV",
       "scroll": "Scroll",
-      "introductionLabel": "Specialization summary"
+      "introductionLabel": "Specialization summary",
+      "contactsLabel": "Contacts"
     },
     "work": {
       "eyebrow": "Selected work",

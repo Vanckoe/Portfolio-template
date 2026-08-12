@@ -101,7 +101,8 @@
       "labDescription": "Трёхмерный объект реагирует на движение указателя.",
       "downloadCv": "Скачать CV",
       "scroll": "Листайте",
-      "introductionLabel": "Кратко о специализации"
+      "introductionLabel": "Кратко о специализации",
+      "contactsLabel": "Контакты"
     },
     "work": {
       "eyebrow": "Выбранные работы",
