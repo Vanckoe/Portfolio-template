@@ -1,6 +1,8 @@
 # 💼 Portfolio Template 
 [Пример](https://vanckoe.vercel.app/)
 
+here is an old version of portfolio tamplate
+
 Универсальный шаблон портфолио для разработчиков — на базе **Next.js 15**, **Tailwind CSS**, **TypeScript** и **Bun**.  
 Поддержка **i18n**, статическая генерация (`output: 'export'`), pixel-perfect дизайн и удобная архитектура компонентов.
 
