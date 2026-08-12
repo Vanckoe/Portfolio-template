@@ -1,4 +1,5 @@
 import PortfolioHero from "./_components/portfolio-hero";
+import ToolOrbit from "./_components/tool-orbit";
 import WorkShowcase from "./_components/work-showcase";
 import CapabilityIndex from "./_components/capability-index";
 import ProjectGeography from "./_components/project-geography";
@@ -8,6 +9,7 @@ export default function PortfolioPage() {
   return (
     <main id="top" className="flex-1">
       <PortfolioHero />
+      <ToolOrbit />
       <WorkShowcase />
       <CapabilityIndex />
       <ProjectGeography />
