@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 html {
-  font-size: 1vw;
+  /* 1rem = 16px при ширине экрана 440px */
+  font-size: 3.636364vw;
 }
 * {
   padding: 0rem;
@@ -119,11 +120,8 @@ h1 {
   text-decoration-skip-ink: none;
 }
 
-/* Для телефонов (максимальная ширина 767px) */
-@media (max-width: 767px) {
-  html {
-    font-size: 3.334vw;
-  }
+/* Для телефонов */
+@media (max-width: 761px) {
   h1 {
     font-family: Manrope;
     font-size: 2rem;      /* 32px -> 2rem */
@@ -140,7 +138,12 @@ h1 {
     padding-right: 1.875rem; /* 30px -> 1.875rem */
   }
 }
-@media (min-width: 767px) {
+/* Для планшетов и десктопов: 1rem = 16px при ширине экрана 1440px */
+@media (min-width: 762px) {
+  html {
+    font-size: 1.111111vw;
+  }
+
   .container {
     width: 80rem; 
   }
