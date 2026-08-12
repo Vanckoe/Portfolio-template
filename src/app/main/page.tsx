@@ -1,19 +1,17 @@
-import React from 'react';
-import Hiro from './_components/hiro';
+import PortfolioHero from "./_components/portfolio-hero";
+import WorkShowcase from "./_components/work-showcase";
+import CapabilityIndex from "./_components/capability-index";
+import ProjectGeography from "./_components/project-geography";
+import ContactSection from "./_components/contact-section";
 
-import RunBunner from './_components/runBunner';
-import ClientStack from './_components/client-stack';
-import MapChart from './_components/map';
-
-const About = () => {
+export default function PortfolioPage() {
   return (
-    <div className="flex flex-col mt-10">
-      <Hiro />
-      <RunBunner />
-      <MapChart />
-      <ClientStack />
-    </div>
+    <main id="top" className="flex-1">
+      <PortfolioHero />
+      <WorkShowcase />
+      <CapabilityIndex />
+      <ProjectGeography />
+      <ContactSection />
+    </main>
   );
-};
-
-export default About;
+}
