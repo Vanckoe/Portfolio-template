@@ -67,6 +67,10 @@
     "project12": {
       "title": "Everest Prime Services",
       "description": "Website for a service company with a modern responsive design. Features a clear section structure, intuitive navigation, and an online booking form. Includes smooth animations, branded colors, and a focus on showcasing services. Integrated for lead submission and client notifications."
+    },
+    "project14": {
+      "title": "Riga Grad",
+      "description": "Promotional website for a premium cottage community in the Moscow region. Features a responsive layout, interactive presentation of its infrastructure and architecture, floor plans, master plan, legal documents, construction timeline, and lead forms."
     }
   },
   "Map": {

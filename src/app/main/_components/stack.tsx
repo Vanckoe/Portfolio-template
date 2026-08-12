@@ -67,6 +67,13 @@ const Project11 = dynamic(() => import('./project-blocks/project11'), {
   ssr: false,
 });
 
+const Project13 = dynamic(() => import('./project-blocks/project13'), {
+  loading: () => (
+    <div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>
+  ),
+  ssr: false,
+});
+
 const Stack = () => {
   const t = useTranslations('Projects');
 
@@ -74,6 +81,13 @@ const Stack = () => {
     <div className="w-full pb-[6.25rem]">
       <div className="flex flex-col justify-between mx-auto container relative px-[1.875rem] gap-20">
         <h1 className="-mb-10 text-6xl">{t('generaltitle')}</h1>
+        <Suspense
+          fallback={
+            <div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>
+          }
+        >
+          <Project13 data-cta="project13" />
+        </Suspense>
         <Suspense
           fallback={
             <div className="animate-pulse bg-gray-700 h-[50vh] w-full"></div>

@@ -10,7 +10,7 @@ const Project1 = () => {
       title={t('project11.title')}
       description={t('project11.description')}
       link="https://seomarket.vercel.app/ru"
-      stack="Nextjs, TypeScript, Tailwind, TelegramAPI, EmailJS, i18n"
+      stack="Nextjs, TypeScript, Tailwind, Telegram API, EmailJS, i18n"
       design="🇺🇦 @v_maslyanik"
       designLink="https://t.me/+o_LQSv0jojg3Y2Zi"
     />

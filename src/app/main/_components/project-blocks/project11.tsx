@@ -10,7 +10,7 @@ const Project1 = () => {
       title={t('project12.title')}
       description={t('project12.description')}
       link="https://everest-sable-alpha.vercel.app"
-      stack="Nextjs, TypeScript, Tailwind, TelegramAPI, Nodemailer"
+      stack="Nextjs, TypeScript, Tailwind, Telegram API, Nodemailer"
       design="🇰🇿 @Vanckoe"
       designLink="https://t.me/Vanckoe"
     />
